@@ -96,7 +96,7 @@ Avec libnfc construit et correctement configuré, vous pouvez exécuter la comma
 >$ sudo ./nfc-poll 
 
 Ce qui devrait donner ce type de résultat : 
-![alt text](https://raw.githubusercontent.com/mahff/NFC-FUZZING/i/nlog.png)
+![alt text](https://raw.githubusercontent.com/mahff/NFC-FUZZING/blob/i/nlog.png)
 
 # Installation 
 Après avoir installé toutes les dépendances, il suffit de cloner ce projet git sur votre ordinateur. 
