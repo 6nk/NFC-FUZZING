@@ -32,8 +32,8 @@ NFC-FUZZING est un framework de fuzzing construit pour fuzz applications NFC, ba
  
 Pour utiliser UART sur Adafruit PN532 RFID/NFC Shield, procédez comme suit :
 
- ** SEL0 doit être OUVERT et SEL1 FERMÉ.
- ** Faire fondre une goutte de soudure pour faire un pont entre les pastilles de cuivre à SEL1.
+ * SEL0 doit être OUVERT et SEL1 FERMÉ.
+ * Faire fondre une goutte de soudure pour faire un pont entre les pastilles de cuivre à SEL1.
  ###### NB : Une fois cette opération effectuée, le module NFC ne fonctionnera plus avec Arduino, puisque le module NFC n'est plus configuré pour communiquer avec SPI ou I2C. Si vous voulez revenir à l'utilisation du bouclier NFC avec l'arduino, vous devrez annuler les modifications que vous avez apportées à SEL1.
  ###### NB : Sur la version de l'Adafruit PN532 RFID/NFC Shield v1.0. SEL0 et SEL1 sont inversés sur la sérigraphie, donc SEL0 est en fait SEL1 et vice versa.
 
@@ -48,11 +48,7 @@ Pour utiliser UART sur Adafruit PN532 RFID/NFC Shield, procédez comme suit :
   - Connecter GNG de la carte FTDI au GND du module NFC. 
   - Connecter TX de la carte FTDI à SCL sur le module NFC.
   - Connecter RX de la carte FTDI à SDA sur le module NFC.
- 
-
-# Installation 
-Après avoir installé toutes les dépendances, il suffit de cloner ce projet git sur votre ordinateur. 
->$ git clone https://github.com/mahff/NFC-FUZZING
+ #### Connecter le câble FTDI à l'ordinateur
 
 # Détecter le module NFC
 ### Installation de [libnfc](https://github.com/nfc-tools/libnfc)
@@ -85,15 +81,24 @@ log_level = 1
 # Manually set default device (no default)
 # To set a default device, you must set both name and connstring for your device
 # Note: if autoscan is enabled, default device will be the first device available in device list.
-#device.name = "_PN532_SPI"
-#device.connstring = "pn532_spi:/dev/spidev0.0:500000"
-#device.name = "_PN532_I2c"
-#device.connstring = "pn532_i2c:/dev/i2c-1"
 device.name = "_PN532_UART"
 device.connstring = "pn532_uart:/dev/ttyUSB0" 
 ```
 
-###### NB : Vous pouvez décommenter les lignes correspondantes au SPI ou I2C si vous travaillez avec ces formats. 
+### Compiler nfclib
+Pour compiler libnfc, il vous suffit d'entrer les commandes suivantes :
+>$ sudo make clean
+>$ sudo make install all 
 
+### Tester 
+Avec libnfc construit et correctement configuré, vous pouvez exécuter la commande suivante pour obtenir l'ID unique des étiquettes, en plaçant une carte NFC sur le module : 
+>$ cd examples
+>$ sudo ./nfc-poll 
 
+Ce qui devrait donner ce type de résultat : 
+![alt text](https://raw.githubusercontent.com/mahff/NFC-FUZZING/img/nlog.png)
+
+# Installation 
+Après avoir installé toutes les dépendances, il suffit de cloner ce projet git sur votre ordinateur. 
+>$ git clone https://github.com/mahff/NFC-FUZZING
 
