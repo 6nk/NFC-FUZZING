@@ -93,6 +93,7 @@ Pour compiler libnfc, il vous suffit d'entrer les commandes suivantes :
 ### Tester 
 Avec libnfc construit et correctement configuré, vous pouvez exécuter la commande suivante pour obtenir l'ID unique des étiquettes, en plaçant une carte NFC sur le module : 
 >$ cd examples
+
 >$ sudo ./nfc-poll 
 
 Ce qui devrait donner ce type de résultat : 
@@ -107,7 +108,7 @@ Exemple de rendu
 ```
 Depuis la version 3.1 du noyau Linux, certans modules ne sont plus pris en charge pour utiliser libnfc. Une des solutions consiste à empêcher le noyau de charger automatiquement ces modules, en les blacklistant dans un fichier conf modprobe. Ce fichier est fourni dans l'archive libnfc : 
 
-$> sudo cp contrib/linux/blacklist-libnfc.conf /etc/modprobe.d/blacklist-libnfc.conf
+>$ sudo cp contrib/linux/blacklist-libnfc.conf /etc/modprobe.d/blacklist-libnfc.conf
 
 ``` 
 Exemple de rendu 
