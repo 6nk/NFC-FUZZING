@@ -36,7 +36,7 @@ class Emulate():
     def prepare_tag(self, target):
         print("3")
         if self.data:
-            # TODO: GENERER LES PREMIERS BYTES AU LIEU DE LES ECRIRE EN DUR DANS LE FICHIER  
+            # TODO: GENERER LES PREMIERS BYTES AU LIEU DE LES ECRIRE EN DUR DANS LE FICHIER
             ndef_data_size = len(self.data)
             print("OPTION.DATA prepared ", self.data)
             ndef_area_size = ((ndef_data_size + 15) // 16) * 16
@@ -105,8 +105,3 @@ class Emulate():
         clf = nfc.ContactlessFrontend(self.usb)
         clf.connect(card={'on-startup': self.on_startup, 'on-connect': self.on_connect, 'on-released': self.on_release})
         clf.close()
-
-    def fakeemulate(self, fname):
-        print(type(fname))
-        devices = subprocess.check_output(['python', 'tagtool.py', '-l', '--device', 'tty:USB0', 'emulate', fname, 'tt3'])
-        devices.strip()

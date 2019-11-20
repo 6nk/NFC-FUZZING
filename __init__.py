@@ -4,19 +4,6 @@ from adb import *
 import random
 from emulate import Emulate
 
-def fakeemulation():
-    ad = adb(host="127.0.0.1", port=5037)
-    device = ad.ListDevices()
-    input_samples =  load_file("data/")
-
-    data = [str(x,'ascii', 'ignore') for x in input_samples][0]
-    Emulate("tty:USB0","�TenHello World!").fakeemulate()
-
-
-
-
-
-
 
 def send(usb, data):
     if SendToAndroid(usb, data).send():
