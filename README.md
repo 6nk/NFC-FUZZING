@@ -96,7 +96,23 @@ Avec libnfc construit et correctement configuré, vous pouvez exécuter la comma
 >$ sudo ./nfc-poll 
 
 Ce qui devrait donner ce type de résultat : 
-![alt text](https://raw.githubusercontent.com/mahff/NFC-FUZZING/blob/i/nlog.png)
+
+``` 
+Exemple de rendu 
+```
+### Erreurs rencontrées
+Durant ce projet, je suis tombé sur deux types d'erreurs en utilisant libnfc, notamment la fonctionnalité nfc-poll :
+``` 
+Exemple de rendu 
+```
+Depuis la version 3.1 du noyau Linux, certans modules ne sont plus pris en charge pour utiliser libnfc. Une des solutions consiste à empêcher le noyau de charger automatiquement ces modules, en les blacklistant dans un fichier conf modprobe. Ce fichier est fourni dans l'archive libnfc : 
+
+$> sudo cp contrib/linux/blacklist-libnfc.conf /etc/modprobe.d/blacklist-libnfc.conf
+
+``` 
+Exemple de rendu 
+```
+Cette erreur est souvent dûe au fait que le module est mal connecté, je vous invite à relire la partie concernant le montage. 
 
 # Installation 
 Après avoir installé toutes les dépendances, il suffit de cloner ce projet git sur votre ordinateur. 
