@@ -96,7 +96,7 @@ Avec libnfc construit et correctement configuré, vous pouvez exécuter la comma
 
 >$ sudo ./nfc-poll 
 
-Ce qui devrait donner ce type de résultat : 
+Ce qui devrait donner un résultat similaire : 
 
 ``` 
 Exemple de rendu 
@@ -118,4 +118,17 @@ Cette erreur est souvent dûe au fait que le module est mal connecté, je vous i
 # Installation 
 Après avoir installé toutes les dépendances, il suffit de cloner ce projet git sur votre ordinateur. 
 >$ git clone https://github.com/mahff/NFC-FUZZING
+
+# Configuration du téléphone 
+```  À compléter ```
+
+# Architecture du code
+```  À compléter ```
+
+# Usage 
+```  À compléter ```
+
+
+# Mail 
+
 
