@@ -44,9 +44,9 @@ Taper :
 >$ ./configure --prefix=/usr --sysconfdir=/etc
 Créer le dossier de configuration : 
 >$ sudo mkdir /etc/nfc/
->$ cd /etc/nfc/
 Créer le fichier de configuration :
->$ sudo nano libnfc.conf
+>$ sudo nano /etc/nfc/libnfc.conf
+Et ajouter ceci dans le fichier :
 ```# Allow intrusive auto-detection (default: false)
 # Warning: intrusive auto-detection can seriously disturb other devices
 # This option is not recommended, user should prefer to add manually his device.
