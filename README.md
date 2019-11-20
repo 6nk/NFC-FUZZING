@@ -26,6 +26,48 @@ NFC-FUZZING est un framework de fuzzing construit pour fuzz applications NFC, ba
  ##### NB : Certains Smartphone android requierent java: default-jdk
  >$ sudo apt install default-jdk
 
-#Installation 
+# Installation 
 Après avoir installé toutes les dépendances, il suffit de cloner ce projet git sur votre ordinateur. 
->& git clone https://github.com/mahff/NFC-FUZZING
+>$ git clone https://github.com/mahff/NFC-FUZZING
+
+# Détecter le module NFC
+### Installation de [libnfc](https://github.com/nfc-tools/libnfc)
+On peut utiliser [libnfc](https://github.com/nfc-tools/libnfc) comme outil permettant de s'assurer que le module NFC est correctement reconnu par l'ordinateur. 
+Pour ce faire, on installe [libnfc](https://github.com/nfc-tools/libnfc/releases/tag/libnfc-1.7.0) : 
+>$ wget https://github.com/nfc-tools/libnfc/releases/download/libnfc-1.7.0/libnfc-1.7.0.tar.bz2
+Ensuite, on dézippe l'archive :
+>$ tar -xvjf libnfc-1.7.0.tar.bz2
+>$ cd cd libnfc-1.7.0
+
+### Configuration 
+Taper : 
+>$ ./configure --prefix=/usr --sysconfdir=/etc
+Créer le dossier de configuration : 
+>$ sudo mkdir /etc/nfc/
+>$ cd /etc/nfc/
+Créer le fichier de configuration :
+>$ sudo nano libnfc.conf
+```# Allow intrusive auto-detection (default: false)
+# Warning: intrusive auto-detection can seriously disturb other devices
+# This option is not recommended, user should prefer to add manually his device.
+allow_intrusive_scan = true
+
+# Set log level (default: error)
+# Valid log levels are (in order of verbosity): 0 (none), 1 (error), 2 (info), 3 (debug)
+# Note: if you compiled with --enable-debug option, the default log level is "debug"
+log_level = 1
+
+# Manually set default device (no default)
+# To set a default device, you must set both name and connstring for your device
+# Note: if autoscan is enabled, default device will be the first device available in device list.
+#device.name = "_PN532_SPI"
+#device.connstring = "pn532_spi:/dev/spidev0.0:500000"
+#device.name = "_PN532_I2c"
+#device.connstring = "pn532_i2c:/dev/i2c-1"
+device.name = "_PN532_UART"
+device.connstring = "pn532_uart:/dev/ttyUSB0" 
+```
+
+
+
+
