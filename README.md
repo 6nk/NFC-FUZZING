@@ -41,12 +41,13 @@ Ensuite, on dézippe l'archive :
 
 ### Configuration 
 Taper : 
->$ ./configure --prefix=/usr --sysconfdir=/etc
+>$ 0000
 Créer le dossier de configuration : 
 >$ sudo mkdir /etc/nfc/
 Créer le fichier de configuration :
 >$ sudo nano /etc/nfc/libnfc.conf
 Et ajouter ceci dans le fichier :
+
 ```# Allow intrusive auto-detection (default: false)
 # Warning: intrusive auto-detection can seriously disturb other devices
 # This option is not recommended, user should prefer to add manually his device.
@@ -68,6 +69,7 @@ device.name = "_PN532_UART"
 device.connstring = "pn532_uart:/dev/ttyUSB0" 
 ```
 
+###### NB : Vous pouvez décommenter les lignes correspondantes au SPI ou I2C si vous travaillez avec ces formats. 
 
 
 
