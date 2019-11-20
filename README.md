@@ -33,20 +33,20 @@ Après avoir installé toutes les dépendances, il suffit de cloner ce projet gi
 # Détecter le module NFC
 ### Installation de [libnfc](https://github.com/nfc-tools/libnfc)
 On peut utiliser [libnfc](https://github.com/nfc-tools/libnfc) comme outil permettant de s'assurer que le module NFC est correctement reconnu par l'ordinateur. 
-Pour ce faire, on installe [libnfc](https://github.com/nfc-tools/libnfc/releases/tag/libnfc-1.7.0) : 
+* Pour ce faire, on installe [libnfc](https://github.com/nfc-tools/libnfc/releases/tag/libnfc-1.7.0) : 
 >$ wget https://github.com/nfc-tools/libnfc/releases/download/libnfc-1.7.0/libnfc-1.7.0.tar.bz2
-Ensuite, on dézippe l'archive :
+* Ensuite, on dézippe l'archive :
 >$ tar -xvjf libnfc-1.7.0.tar.bz2
 >$ cd cd libnfc-1.7.0
 
 ### Configuration 
-Taper : 
+* Taper : 
 >$ 0000
-Créer le dossier de configuration : 
+* Créer le dossier de configuration : 
 >$ sudo mkdir /etc/nfc/
-Créer le fichier de configuration :
+* Créer le fichier de configuration :
 >$ sudo nano /etc/nfc/libnfc.conf
-Et ajouter ceci dans le fichier :
+* Et ajouter ceci dans le fichier :
 
 ```# Allow intrusive auto-detection (default: false)
 # Warning: intrusive auto-detection can seriously disturb other devices
