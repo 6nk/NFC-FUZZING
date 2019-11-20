@@ -25,6 +25,30 @@ NFC-FUZZING est un framework de fuzzing construit pour fuzz applications NFC, ba
  
  ##### NB : Certains Smartphone android requierent java: default-jdk
  >$ sudo apt install default-jdk
+ 
+ # Montage 
+ * Préparer Adafruit PN532 RFID/NFC Shield
+ Ce montage est réalisé en utilisant l'UART et peut fonctionner à la fois avec [PN532 Breakout Board](http://www.adafruit.com/product/364) et [PN532 Controller Shield for Arduino(https://www.adafruit.com/product/789)
+ 
+Pour utiliser UART sur Adafruit PN532 RFID/NFC Shield, procédez comme suit :
+
+ ** SEL0 doit être OUVERT et SEL1 FERMÉ.
+ ** Faire fondre une goutte de soudure pour faire un pont entre les pastilles de cuivre à SEL1.
+ ###### NB : Une fois cette opération effectuée, le module NFC ne fonctionnera plus avec Arduino, puisque le module NFC n'est plus configuré pour communiquer avec SPI ou I2C. Si vous voulez revenir à l'utilisation du bouclier NFC avec l'arduino, vous devrez annuler les modifications que vous avez apportées à SEL1.
+ ###### NB : Sur la version de l'Adafruit PN532 RFID/NFC Shield v1.0. SEL0 et SEL1 sont inversés sur la sérigraphie, donc SEL0 est en fait SEL1 et vice versa.
+
+* Connecter le câble FTDI au module NFC
+ ** Méthode 1:
+  - Connecter 5V de la carte FTDI à 5V sur le 5V du module NFC. 
+  - Connecter GNG de la carte FTDI au GND du module NFC. 
+  - Connecter TX de la carte FTDI à SS sur le module NFC.
+  - Connecter RX de la carte FTDI à MOSI sur le module NFC.
+ ** Méthode 2:
+  - Connecter 5V de la carte FTDI à 5V sur le 5V du module NFC. 
+  - Connecter GNG de la carte FTDI au GND du module NFC. 
+  - Connecter TX de la carte FTDI à SCL sur le module NFC.
+  - Connecter RX de la carte FTDI à SDA sur le module NFC.
+ 
 
 # Installation 
 Après avoir installé toutes les dépendances, il suffit de cloner ce projet git sur votre ordinateur. 
@@ -41,7 +65,7 @@ On peut utiliser [libnfc](https://github.com/nfc-tools/libnfc) comme outil perme
 
 ### Configuration 
 * Taper : 
->$ 0000
+>$ ./configure --prefix=/usr --sysconfdir=/etc
 * Créer le dossier de configuration : 
 >$ sudo mkdir /etc/nfc/
 * Créer le fichier de configuration :
