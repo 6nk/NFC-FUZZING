@@ -20,10 +20,10 @@ NFC-FUZZING est un framework de fuzzing construit pour fuzz applications NFC, ba
   Pour l'installation de ces différentes dépendances, il vous suffit de taper: 
   >$ sudo pip install [nom_package]
   
- ##### NB : Il faut au préalable avoir installer [python3-pip](https://pip.pypa.io/en/stable/installing/), avec :
+ ###### NB : Il faut au préalable avoir installer [python3-pip](https://pip.pypa.io/en/stable/installing/), avec :
  >$ sudo apt install python3-pip pour une distribution linux basé sur Debian. 
  
- ##### NB : Certains Smartphone android requierent java: default-jdk
+ ###### NB : Certains Smartphone android requierent java: default-jdk
  >$ sudo apt install default-jdk
  
  # Montage 
@@ -38,12 +38,12 @@ Pour utiliser UART sur Adafruit PN532 RFID/NFC Shield, procédez comme suit :
  ###### NB : Sur la version de l'Adafruit PN532 RFID/NFC Shield v1.0. SEL0 et SEL1 sont inversés sur la sérigraphie, donc SEL0 est en fait SEL1 et vice versa.
 
 * Connecter le câble FTDI au module NFC
- ** Méthode 1:
+ #### Méthode 1:
   - Connecter 5V de la carte FTDI à 5V sur le 5V du module NFC. 
   - Connecter GNG de la carte FTDI au GND du module NFC. 
   - Connecter TX de la carte FTDI à SS sur le module NFC.
   - Connecter RX de la carte FTDI à MOSI sur le module NFC.
- ** Méthode 2:
+ #### Méthode 2:
   - Connecter 5V de la carte FTDI à 5V sur le 5V du module NFC. 
   - Connecter GNG de la carte FTDI au GND du module NFC. 
   - Connecter TX de la carte FTDI à SCL sur le module NFC.
