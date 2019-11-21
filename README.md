@@ -137,7 +137,10 @@ Les droits d'accès au fichier du port série : /dev/ttyUSB0 est à l'origine de
 ```
 exemple error timeout
 ```
-
+La bibliothéque libnfc n'a pas suffisamment de temps pour communiquer avec le module NFC et renvoit cette erreur. L'une des solutions et l'ajout de résistances de 220 Ohm ou 500 Ohm entre : 
+  - Le TX de la carte FTDI et [SS] ou [SCL] du module NFC.
+  - Le RX de la carte FTDI et [MOSI] ou [SDA] du module NFC.
+  
 
 # Installation 
 Après avoir installé toutes les dépendances, il suffit de cloner ce projet git sur votre ordinateur. 
