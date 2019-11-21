@@ -145,8 +145,11 @@ La bibliothéque libnfc n'a pas suffisamment de temps pour communiquer avec le m
   - Le RX de la carte FTDI et [MOSI] ou [SDA] du module NFC.
 L'autre solution consiste à regarder si il n'existe pas plusieurs modules dans la liste des modules du noyau chargés en mémoire :
 >$ sudo lsmod 
+
 On regarde les modules pn5xx, éventuellement avec :
+
 >$ sudo lsmod | grep "pn"
+
 Si il s'avère qu'il y a bien plusieurs modules, il suffit de se référer à la solution de l'erreur 1 et bloquer les modules non souhaités.
   
 
