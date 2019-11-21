@@ -111,21 +111,22 @@ nfc_initiator_target_is_present: Target Released
 Waiting for card removing...done.
 ```
 ### Erreurs rencontrées
-Durant ce projet, je suis tombé sur quatre types d'erreurs en utilisant libnfc, notamment la fonctionnalité nfc-poll :
+Durant ce projet, je suis tombé sur quatre types d'erreurs en utilisant libnfc, notamment les fonctionnalités nfc-poll et nfc nfc-list :
+##### Erreur 1
 ``` 
 Exemple de rendu 
 ```
 Depuis la version 3.1 du noyau Linux, certans modules ne sont plus pris en charge pour utiliser libnfc. Une des solutions consiste à empêcher le noyau de charger automatiquement ces modules, en les blacklistant dans un fichier conf modprobe. Ce fichier est fourni dans l'archive libnfc : 
 
 >$ sudo cp contrib/linux/blacklist-libnfc.conf /etc/modprobe.d/blacklist-libnfc.conf
-
+##### Erreur 2
 ``` 
 nfc-poll uses libnfc 1.7.1
 error	libnfc.driver.pn532_uart	pn53x_check_communication error
 nfc-poll: ERROR: Unable to open NFC device.
 ```
 Cette erreur est souvent dûe au fait que le module est mal connecté, je vous invite à relire la partie concernant le montage. 
-
+##### Erreur 3
 ```
 nfc-poll uses libnfc 1.7.1
 error	libnfc.driver.pn532_uart	Invalid serial port: /dev/ttyUSB0
@@ -133,13 +134,20 @@ nfc-poll: ERROR: Unable to open NFC device.
 ```
 Les droits d'accès au fichier du port série : /dev/ttyUSB0 est à l'origine de ce problème. Un simple [chmod] sur le dit port série résoudra l'erreur : 
 >$ sudo chmod 777 /dev/ttyUSB0
-
+##### Erreur 4
 ```
-exemple error timeout
+nfc-list uses libnfc 1.7.1
+error libnfc.driver.pn532_uart  Unable to claim USB interface (Device or resource busy)
+nfc-list: ERROR: Unable to open NFC device: pn532_uart:/dev/ttyUSB0
 ```
 La bibliothéque libnfc n'a pas suffisamment de temps pour communiquer avec le module NFC et renvoit cette erreur. L'une des solutions et l'ajout de résistances de 220 Ohm ou 500 Ohm entre : 
   - Le TX de la carte FTDI et [SS] ou [SCL] du module NFC.
   - Le RX de la carte FTDI et [MOSI] ou [SDA] du module NFC.
+L'autre solution consiste à regarder si il n'existe pas plusieurs modules dans la liste des modules du noyau chargés en mémoire :
+>$ sudo lsmod 
+On regarde les modules pn5xx, éventuellement avec :
+>$ sudo lsmod | grep "pn"
+Si il s'avère qu'il y a bien plusieurs modules, il suffit de se référer à la solution de l'erreur 1 et bloquer les modules non souhaités.
   
 
 # Installation 
