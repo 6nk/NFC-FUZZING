@@ -32,13 +32,13 @@ def mutate_bits(data):
         bit = random.randint(0, len(data)*8-1)
         # print(("bit", bit))
         idx_bit = bit%8
-        print(("idx_bit", idx_bit))
+        # print(("idx_bit", idx_bit))
         idx_byte = bit/8
         # print(("idx_byte", idx_byte))
         # print(("initial data", data))
         # print(("mutated idx data", data[int(idx_byte)]))
         data[int(idx_byte)] ^= 1 << idx_bit
-        print(("data", data))
+        # print(("data", data))
     return data
 
 def mutate_bytes(data):
@@ -49,7 +49,7 @@ def mutate_bytes(data):
     if count == 0 :
         count = 1
     for i in range(count):
-        print(("--------------- ITERATION ------------", i))
+        # print(("--------------- ITERATION ------------", i))
         # print(("data initial", data))
         rand = random.randint(0,255)
         x = random.randint(0, len(data) - 1)
@@ -78,7 +78,7 @@ def mutate_magic(data):
     if count == 0 :
         count = 1
     for i in range(count):
-        print(("--------------- ITERATION ------------", i))
+        # print(("--------------- ITERATION ------------", i))
         n_size, n = random.choice(numbers)
         # print(("nzise, n", n_size, n))
         size = len(data) - n_size
