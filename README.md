@@ -99,10 +99,19 @@ Avec libnfc construit et correctement configuré, vous pouvez exécuter la comma
 Ce qui devrait donner un résultat similaire : 
 
 ``` 
-Exemple de rendu 
+nfc-poll uses libnfc 1.7.1
+NFC reader: pn532_uart:/dev/ttyUSB0 opened
+NFC device will poll during 30000 ms (20 pollings of 300 ms for 5 modulations)
+ISO/IEC 14443A (106 kbps) target:
+    ATQA (SENS_RES): 00  42  
+       UID (NFCID1): 02  c4  00  45  02  d0  e3  
+      SAK (SEL_RES): 20  
+                ATS: 78  00  50  02  
+nfc_initiator_target_is_present: Target Released
+Waiting for card removing...done.
 ```
 ### Erreurs rencontrées
-Durant ce projet, je suis tombé sur deux types d'erreurs en utilisant libnfc, notamment la fonctionnalité nfc-poll :
+Durant ce projet, je suis tombé sur quatre types d'erreurs en utilisant libnfc, notamment la fonctionnalité nfc-poll :
 ``` 
 Exemple de rendu 
 ```
@@ -111,9 +120,24 @@ Depuis la version 3.1 du noyau Linux, certans modules ne sont plus pris en charg
 >$ sudo cp contrib/linux/blacklist-libnfc.conf /etc/modprobe.d/blacklist-libnfc.conf
 
 ``` 
-Exemple de rendu 
+nfc-poll uses libnfc 1.7.1
+error	libnfc.driver.pn532_uart	pn53x_check_communication error
+nfc-poll: ERROR: Unable to open NFC device.
 ```
 Cette erreur est souvent dûe au fait que le module est mal connecté, je vous invite à relire la partie concernant le montage. 
+
+```
+nfc-poll uses libnfc 1.7.1
+error	libnfc.driver.pn532_uart	Invalid serial port: /dev/ttyUSB0
+nfc-poll: ERROR: Unable to open NFC device.
+```
+Les droits d'accès au fichier du port série : /dev/ttyUSB0 est à l'origine de ce problème. Un simple [chmod] sur le dit port série résoudra l'erreur : 
+>$ sudo chmod 777 /dev/ttyUSB0
+
+```
+exemple error timeout
+```
+
 
 # Installation 
 Après avoir installé toutes les dépendances, il suffit de cloner ce projet git sur votre ordinateur. 
