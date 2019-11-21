@@ -1,4 +1,4 @@
- # Information général
+ # Information générale
 
 NFC-FUZZING est un framework de fuzzing construit pour fuzz applications NFC, basé sur le NFC type 3. 
 
