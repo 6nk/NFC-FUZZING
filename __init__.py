@@ -14,29 +14,30 @@ def send(usb, data):
 def emulationMode():
     # ad = adb(host="127.0.0.1", port=5037)
     # device = ad.ListDevices()
-    data =  load_file("data/")
+    # data =  load_file("data/data/")
     emul = Emulate("tty:USB0")
+    # data = "http://www.google.com"
 
+    data = "Hello Wolrd!"
     print(data)
-
     print(type(data))
     # ad.logCat(device, data)
     emul.emulate(data)
     # ad.logCat(device, data)
 
-    mutated_sample = mutate((data))
-
-    print("mutated_sample", mutated_sample)
-    print("mutated_sample type", type(mutated_sample))
-    # ad.logCat(device, mutated_sample.decode('ISO-8859-1'))
-    emul.emulate(mutated_sample)
+    # mutated_sample = mutate((data))
+    #
+    # print("mutated_sample", mutated_sample)
+    # print("mutated_sample type", type(mutated_sample))
+    # # ad.logCat(device, mutated_sample.decode('ISO-8859-1'))
+    # emul.emulate(mutated_sample)
     # ad.logCat(device, mutated_sample.decode('ISO-8859-1'))
 
 
 def normalMode():
     ad = adb(host="127.0.0.1", port=5037)
     device = ad.ListDevices()
-    input_samples = [ load_file("data/data") ]
+    input_samples = [ load_file("data/") ]
 
     data = [str(x,'ascii', 'ignore') for x in input_samples][0]
 

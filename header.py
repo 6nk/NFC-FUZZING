@@ -9,33 +9,34 @@ class Header():
         self.len_tnf = 0
         self.payload_length = 0
         self.ndef_data = bytearray()
-        self. header = {
-            'MB' : 1, 'ME' : 1, 'CR' : 0, 'SR' : 1, 'IL' : 0, 'TNF' : '{0:03b}'.format(self.getlenTNF())
+        self.header = {
+            'MB' : 1, 'ME' : 1, 'CR' : 0, 'SR' : 1, 'IL' : 0, 'TNF' : '{0:03b}'.format(0)
         }
 
     # TODO: Finir la génération du header
 
     def protocol(self, data,fuzz=None): # RECORD TYPE
         # TODO prendre en compte le type 02 et
+
         if fuzz == None:
             uri = self.URI_Identifier(data)
             smartp = self.SmartPoster(data)
             if not data or data is " ":
-                self.len_tnf = len(bytes([0]))
-                return bytes([1,len(data), self.len_tnf]) + bytes([0])
+                self.header['TNF'] = '{0:03b}'.format(1)
+                return bytes([1,len(data)]) + bytes([0])
             elif uri :
                 self.tnf = bytes([85])
-                self.len_tnf = len(self.tnf)
-                return bytes([1,len(data), self.len_tnf]) + uri
-            elif smartp :
-                self.tnf = bytes([83,112])
-                self.len_tnf = len(self.tnf)
-                return bytes([1,len(data), self.len_tnf]) + smartp
+                self.header['TNF'] = '{0:03b}'.format(1)
+                return bytes([1,len(data)-4]) + self.tnf + uri
+            # elif smartp :
+            #     self.tnf = bytes([83,112])
+            #     self.len_tnf = len(self.tnf)
+            #     return bytes([1,len(data), self.len_tnf]) + smartp
             else :
-                txt = self.text(data, "fr")
+                txt = self.text(data, "en")
                 self.tnf = txt
-                self.len_tnf = len(bytes([84]))
-                return bytes([1,len(data), self.len_tnf]) + txt
+                self.header['TNF'] = '{0:03b}'.format(1)
+                return bytes([1,len(data)+len("en")+1]) + txt
 
         rand = random.randint(0, 255)
         return bytes([rand])
@@ -61,6 +62,7 @@ class Header():
             return bytes([URI_Identifier_Code['tel:']])
         for key, value in URI_Identifier_Code.items():
             if key in data:
+                self.data = data.replace(key, '')
                 return bytes([value])
         return None
 
@@ -99,6 +101,9 @@ class Header():
         rand = random.randint(0,255)
         self.header['TNF'] = '{0:03b}'.format(rand)
 
+    def setlenTNF(self, len):
+        self.tnf = len
+
     def getNdef_data(self, data):
         # Nous allons partir du principe qu'un message NDEF n'est pas tronqué
         # Il sera donc envoyé en entier.
@@ -109,4 +114,4 @@ class Header():
             print(self.ndef_data)
             return self.ndef_data
 
-Header().getNdef_data("salut")
+Header().getNdef_data("Hello world!")
