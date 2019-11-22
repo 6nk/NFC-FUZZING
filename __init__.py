@@ -36,7 +36,7 @@ def emulationMode():
 def normalMode():
     ad = adb(host="127.0.0.1", port=5037)
     device = ad.ListDevices()
-    input_samples = [ load_file("data/") ]
+    input_samples = [ load_file("data/data") ]
 
     data = [str(x,'ascii', 'ignore') for x in input_samples][0]
 

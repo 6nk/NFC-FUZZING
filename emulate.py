@@ -4,6 +4,7 @@ import logging
 import ndef
 import logging
 import subprocess
+from header import Header
 
 log = logging.getLogger('main')
 
@@ -46,7 +47,20 @@ class Emulate():
         else:
             ndef_data_area = bytearray(1024)
 
+        # if self.data:
+        #     # TODO: GENERER LES PREMIERS BYTES AU LIEU DE LES ECRIRE EN DUR DANS LE FICHIER
+        #     header = Header().getNdef_data(self.data)
+        #     ndef_data_size = len(header)
+        #     print("OPTION.DATA prepared ", self.data)
+        #     ndef_area_size = ((ndef_data_size + 15) // 16) * 16
+        #     ndef_area_size = max(ndef_area_size, 1024)
+        #     ndef_data_area = header \
+        #         + bytearray(ndef_area_size - ndef_data_size)
+        # else:
+        #     ndef_data_area = bytearray(1024)
+
         # create attribute data
+
         attribute_data = bytearray(16)
         attribute_data[0] = 16
         attribute_data[1] = 1
