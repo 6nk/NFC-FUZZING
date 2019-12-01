@@ -16,10 +16,8 @@ class Header():
     # TODO: Finir la génération du header
 
     def protocol(self, data,fuzz=None): # RECORD TYPE
-        # TODO prendre en compte le type 02 et
-
         if fuzz == None:
-            uri = self.URI_Identifier(data)
+            uri = self.Well_known_URI(data)
             smartp = self.SmartPoster(data)
             if not data or data is " ":
                 self.header['TNF'] = '{0:03b}'.format(1)
@@ -48,8 +46,8 @@ class Header():
             rand = random.randint(0, 255)
             return bytes([rand])
 
-    def URI_Identifier(self, data):
-        URI_Identifier_Code = {'http://www.' : 1, 'https://www.' : 2, 'http://' : 3, 'https://' : 4,
+    def Well_known_URI(self, data):
+        Well_known_URI_Code = {'http://www.' : 1, 'https://www.' : 2, 'http://' : 3, 'https://' : 4,
          'tel:' : 5, 'mailto:' : 6, 'ftp://anonymous:anonymous@' : 7, 'ftp://ftp.' : 8,
          'ftps://' : 9, 'sftp://' : 10, 'smb://' : 11, 'nfs://' : 12, 'ftp://' : 13,
          'dav://' : 14, 'news:' : 15, 'telnet://' : 16, 'imap:' : 17, 'rtsp://' : 18,
@@ -59,14 +57,30 @@ class Header():
          'urn:epc:raw:' : 33, 'urn:epc:' : 34, 'urn:nfc:' : 35}
 
         if re.search(r'^(?:(?:\+|00)[0-9]+[\s.-]{0,3}(?:\(0\)[\s.-]{0,3})?|0)[1-9](?:(?:[\s.-]?\d{2}){4}|\d{2}(?:[\s.-]?\d{3}){2})', data):
-            return bytes([URI_Identifier_Code['tel:']])
-        for key, value in URI_Identifier_Code.items():
+            return bytes([Well_known_URI_Code['tel:']])
+        for key, value in Well_known_URI_Code.items():
             if key in data:
                 self.data = data.replace(key, '')
                 return bytes([value])
+            return None
         return None
 
-    def get(self):
+
+    def MIME(self, data):
+        pass
+
+
+
+    def URIs(self, data):
+        if re.search(r'((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,6}([a-zA-Z0-9\.\&\/\?\:@\-_=#])*', data):
+            self.setTNF(2)
+
+        return None
+
+    def external(self, data):
+        pass
+
+    def getTNF(self):
         return self.tnf
 
     def SmartPoster(self, data):
@@ -84,25 +98,28 @@ class Header():
     def getlenTNF(self):
         return self.len_tnf
 
+    def setlenTNF(self, len):
+        self.tnf = len
+
     def bitstring_to_bytes(self, s):
         return int(s, 2).to_bytes(len(s) // 8, byteorder='big')
 
-    def setMB(self):
+    def setRandMB(self):
         self.header['MB'] =  random.randint(0, 255)
-    def setME(self):
+    def setRandME(self):
         self.header['ME'] = random.randint(0, 255)
-    def setCR(self):
+    def setRandCR(self):
         self.header['CR'] = random.randint(0, 255)
-    def setSR(self):
+    def setRandSR(self):
         self.header['SR'] = random.randint(0, 255)
-    def setME(self):
+    def setRandME(self):
         self.header['IL'] = random.randint(0, 255)
-    def setTNF(self):
+    def setRandTNF(self):
         rand = random.randint(0,255)
         self.header['TNF'] = '{0:03b}'.format(rand)
 
-    def setlenTNF(self, len):
-        self.tnf = len
+    def setTNF(self, tnf):
+        self.header['TNF'] = '{0:03b}'.format(tnf)
 
     def getNdef_data(self, data):
         # Nous allons partir du principe qu'un message NDEF n'est pas tronqué
@@ -114,4 +131,4 @@ class Header():
             print(self.ndef_data)
             return self.ndef_data
 
-Header().getNdef_data("Hello world!")
+Header().getNdef_data("")
