@@ -4,15 +4,12 @@ import logging
 import ndef
 import logging
 import subprocess
-from header import Header
 
 log = logging.getLogger('main')
 
 class Emulate():
     def __init__(self, usb):
-        self.data = ''
-        print(self.data)
-
+        self.payload = ''
         self.usb = usb
 
     def on_startup(self, target):
@@ -36,25 +33,24 @@ class Emulate():
 
     def prepare_tag(self, target):
         print("3")
-        # if self.data:
+        # if self.payload:
         #     # TODO: GENERER LES PREMIERS BYTES AU LIEU DE LES ECRIRE EN DUR DANS LE FICHIER
-        #     ndef_data_size = len(self.data)
-        #     print("OPTION.DATA prepared ", self.data)
+        #     ndef_data_size = len(self.payload)
+        #     print("OPTION.DATA prepared ", self.payload)
         #     ndef_area_size = ((ndef_data_size + 15) // 16) * 16
         #     ndef_area_size = max(ndef_area_size, 1024)
-        #     ndef_data_area = (self.data) \
+        #     ndef_data_area = (self.payload) \
         #         + bytearray(ndef_area_size - ndef_data_size)
         # else:
         #     ndef_data_area = bytearray(1024)
 
-        if self.data:
+        if self.payload:
             # TODO: GENERER LES PREMIERS BYTES AU LIEU DE LES ECRIRE EN DUR DANS LE FICHIER
-            header = Header().getNdef_data(self.data)
-            ndef_data_size = len(header)
-            print("OPTION.DATA prepared ", self.data)
+            ndef_data_size = len(self.payload)
+            print("OPTION.DATA prepared ", self.payload)
             ndef_area_size = ((ndef_data_size + 15) // 16) * 16
             ndef_area_size = max(ndef_area_size, 1024)
-            ndef_data_area = header \
+            ndef_data_area = self.payload \
                 + bytearray(ndef_area_size - ndef_data_size)
         else:
             ndef_data_area = bytearray(1024)
@@ -70,16 +66,16 @@ class Emulate():
         print("nmaxb", nmaxb)
         attribute_data[5:9] = 4 * [0]
         attribute_data[9] = 0
-        print("self.options.data", self.data)
-        attribute_data[10:14] = struct.pack(">I", len(self.data))
+        print("self.options.data", self.payload)
+        attribute_data[10:14] = struct.pack(">I", len(self.payload))
 
         attribute_data[10] = 1
         print(attribute_data[15])
         attribute_data[14:16] = struct.pack(">H", sum(attribute_data[:14]))
-        self.data = attribute_data + ndef_data_area
+        self.payload = attribute_data + ndef_data_area
         print("ndef_data_area", ndef_data_area)
         print("ndef_data_area len",len(ndef_data_area))
-        print(self.data)
+        print(self.payload)
         target.brty =  "212F"
         idm, pmm, _sys = '03FEFFE011223344', '01E0000000FFFF00', '12FC'
         target.sensf_res = bytearray.fromhex('01' + idm + pmm + _sys)
@@ -91,17 +87,17 @@ class Emulate():
         def ndef_read(block_number, rb, re):
             print("7")
             log.debug("tt3 read block #{0}".format(block_number))
-            if block_number < len(self.data) / 16:
+            if block_number < len(self.payload) / 16:
                 first, last = block_number * 16, (block_number + 1) * 16
-                block_data = self.data[first:last]
+                block_data = self.payload[first:last]
                 return block_data
 
         def ndef_write(block_number, block_data, wb, we=1):
             print("8")
             log.debug("tt3 write block #{0}".format(block_number))
-            if block_number < len(self.data) / 16:
+            if block_number < len(self.payload) / 16:
                 first, last = block_number * 16, (block_number + 1) * 16
-                self.data[first:last] = block_data
+                self.payload[first:last] = block_data
                 print("block_data", block_data)
                 return True
 
@@ -115,7 +111,7 @@ class Emulate():
         return True
 
     def emulate(self, data):
-        self.data = data
+        self.payload = data
         clf = nfc.ContactlessFrontend(self.usb)
         clf.connect(card={'on-startup': self.on_startup, 'on-connect': self.on_connect, 'on-released': self.on_release})
         clf.close()

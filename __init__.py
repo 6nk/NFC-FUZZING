@@ -3,6 +3,8 @@ from sendAndroid import *
 from adb import *
 import random
 from emulate import Emulate
+from NdefGeneration import *
+import argparse
 
 
 def send(usb, data):
@@ -15,14 +17,14 @@ def emulationMode():
     # ad = adb(host="127.0.0.1", port=5037)
     # device = ad.ListDevices()
     # data =  load_file("data/data/")
+
+    ndef = NdefGeneration()
+    data = ndef.getNdef_payload("www.google.com")
     emul = Emulate("tty:USB0")
     # data = "http://www.google.com"
-
-    data = "Hello Wolrd!"
-    print(data)
-    print(type(data))
     # ad.logCat(device, data)
     emul.emulate(data)
+    # print("NDEF TNF ", ndef.getTNF())
     # ad.logCat(device, data)
 
     # mutated_sample = mutate((data))
@@ -51,12 +53,17 @@ def normalMode():
 
 def __init__():
 
-
-     emulationMode()
-
-
-     # normalMode()
-
+    parser = argparse.ArgumentParser()
+    parser.add_argument("square", type=int,
+                        help="display a square of a given number")
+    parser.add_argument("-v", "--verbose", action="store_true",
+                        help="increase output verbosity")
+    args = parser.parse_args()
+    answer = args.square**2
+    if args.verbose:
+        print("the square of {} equals {}".format(args.square, answer))
+    else:
+        print(answer)
 
 
 
