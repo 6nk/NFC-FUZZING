@@ -168,5 +168,3 @@ class NdefGeneration():
             # print(self.ndef_payload)
             return self.ndef_payload
         return None
-
-# NdefGeneation().getNdef_payload("http://www.google.com")
