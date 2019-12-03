@@ -147,7 +147,6 @@ class NdefGeneration():
                     self.payload = mutated_sample
                     self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + empty + bytearray(self.payload.encode("UTF-8"))
                 elif fields :
-                    print(self.header)
                     self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload.encode("UTF-8"))
                 else:
                     self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload.encode("UTF-8"))
@@ -187,5 +186,6 @@ class NdefGeneration():
             #     self.setTNF(6)
             #     header = ''.join(str(value) for key,value in self.header.items())
             #     self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + unchanged + bytearray(self.payload.encode("UTF-8"))
+            print(self.header)
             return self.ndef_payload
         return None
