@@ -114,8 +114,10 @@ def __init__():
         else:
             print("Invalid field ! You can only fuzz one of them : [TNF, MB, ME, CR, SR, IL]")
             exit(0)
-        emulationMode(results.p, ndef, 0, 0, 1)
-
+        if results.adb :
+            emulationMode(results.p, ndef, 0, 0, 1)
+        else:
+            emulationMode(results.p, ndef, 0, 1, 1)
 
 
 __init__()
