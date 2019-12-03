@@ -1,6 +1,6 @@
 import random
 import re
-
+from mFuzz import *
 
 class NdefGeneration():
 
@@ -100,33 +100,36 @@ class NdefGeneration():
         pass
 
     def setRandMB(self):
-        self.header['MB'] =  random.randint(0, 255)
+        self.header['MB'] =  bin(random.randint(0, 255))
     def setRandME(self):
-        self.header['ME'] = random.randint(0, 255)
+        self.header['ME'] = bin(random.randint(0, 255))
     def setRandCR(self):
-        self.header['CR'] = random.randint(0, 255)
+        self.header['CR'] = bin(random.randint(0, 255))
     def setRandSR(self):
-        self.header['SR'] = random.randint(0, 255)
-    def setRandME(self):
-        self.header['IL'] = random.randint(0, 255)
+        self.header['SR'] = bin(random.randint(0, 255))
+    def setRandIL(self):
+        self.header['IL'] = bin(random.randint(0, 255))
     def setRandTNF(self):
         rand = random.randint(0,255)
-        self.header['TNF'] = '{0:03b}'.format(rand)
+        self.header['TNF'] = '{0:08b}'.format(rand)
 
     def Empty(self, payload):
         if not payload or payload is " ":
-
             return bytes([1,len(payload)])
         return None
 
-    def bitstring_to_bytes(self, s):
+    def bitstring_to_bytes(self, s, fuzz):
+        # print("len",len(s))
+        # randbool = bool(random.getrandbits(1))
+        if fuzz :
+            randbool = bool(random.getrandbits(1))
+            return int(s, 16).to_bytes(256 // 8, byteorder='big', signed=randbool)
         return int(s, 2).to_bytes(len(s) // 8, byteorder='big')
 
-    def getNdef_payload(self, payload):
+    def getNdef_payload(self, payload, fuzz, fields):
         # Nous allons partir du principe qu'un message NDEF n'est pas tronqué
         # Il sera donc envoyé en entier.
         if len(payload) < 1024 :
-
             empty = self.Empty(payload)
             well_known = self.Well_Known(payload)
             # mime = self.MIME(payload)
@@ -137,34 +140,53 @@ class NdefGeneration():
             if not payload or payload is " ":
                 self.setTNF(0)
                 header = ''.join(str(value) for key,value in self.header.items())
-                self.ndef_payload = bytearray(self.bitstring_to_bytes(header)) + empty + bytearray(self.payload.encode("UTF-8"))
 
-            elif well_known and not uri:
+                if fuzz :
+                    mutated_sample = mutate(bytearray(payload.encode()))
+                    self.payload = mutated_sample
+                    self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + empty + bytearray(self.payload.encode("UTF-8"))
+                elif fields :
+                    self.setRandTNF()
+                    print(self.header)
+                    self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload.encode("UTF-8"))
+                else:
+                    self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload.encode("UTF-8"))
+
+            elif well_known:
                 self.setTNF(1)
                 header = ''.join(str(value) for key,value in self.header.items())
-                print(self.header)
-                print(header)
-                self.ndef_payload = bytearray(self.bitstring_to_bytes(header)) + well_known + bytearray(self.payload.encode("UTF-8"))
-
+                if fuzz :
+                    mutated_sample = mutate(bytearray(payload.encode()))
+                    self.payload = mutated_sample
+                    self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload)
+                elif fields :
+                    self.setRandTNF()
+                    print(self.header)
+                    self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload.encode("UTF-8"))
+                else:
+                    self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload.encode("UTF-8"))
             # elif mime :
             #     self.setTNF(2)
             #     header = ''.join(str(value) for key,value in self.header.items())
-            #     self.ndef_payload = bytearray(self.bitstring_to_bytes(header)) + mime + bytearray(self.payload.encode("UTF-8"))
+            #     self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + mime + bytearray(self.payload.encode("UTF-8"))
             #
-            elif uri :
-                self.setTNF(3)
-                header = ''.join(str(value) for key,value in self.header.items())
-                self.ndef_payload = bytearray(self.bitstring_to_bytes(header)) + uri + bytearray(self.payload.encode("UTF-8"))
-
+            # elif uri :
+            #     self.setTNF(3)
+            #     header = ''.join(str(value) for key,value in self.header.items())
+            #     if fuzz :
+            #         mutated_sample = mutate(bytearray(payload.encode()))
+            #         self.payload = mutated_sample
+            #         self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + uri + bytearray(self.payload)
+            #     else :
+            #         self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + uri + bytearray(self.payload.encode("UTF-8"))
             # elif external:
             #     self.setTNF(4)
             #     header = ''.join(str(value) for key,value in self.header.items())
-            #     self.ndef_payload = bytearray(self.bitstring_to_bytes(header)) + external + bytearray(self.payload.encode("UTF-8"))
+            #     self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + external + bytearray(self.payload.encode("UTF-8"))
             #
             # elif unchanged :
             #     self.setTNF(6)
             #     header = ''.join(str(value) for key,value in self.header.items())
-            #     self.ndef_payload = bytearray(self.bitstring_to_bytes(header)) + unchanged + bytearray(self.payload.encode("UTF-8"))
-            # print(self.ndef_payload)
+            #     self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + unchanged + bytearray(self.payload.encode("UTF-8"))
             return self.ndef_payload
         return None

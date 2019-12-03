@@ -10,6 +10,7 @@ class adb:
         self.host = host
         self.port = port
         data = None
+        self.connect = None
 
     def connectServer(self):
         client = AdbClient(host=self.host, port=self.port)
@@ -31,12 +32,14 @@ class adb:
         return device
 
     def dump_logcat(self, connect):
-        file_obj = connect.socket.makefile()
+        self.connect = connect.socket.makefile()
         for index in range(0, 100):
-            print("Data {}: {}".format(self.getData(), file_obj.readline().strip()))
-            self.save_to_file("emlog", "Data {}: {} \r\n".format(self.getData(), file_obj.readline().strip()))
-        file_obj.close()
-        connect.close()
+            print("Data {}: {}".format(self.getData(), self.connect.readline().strip()))
+            self.save_to_file("emlog", "Data {}: {} \r\n".format(self.getData(), self.connect.readline().strip()))
+
+
+    def close_logcat(self):
+        self.connect.close()
 
     def setData(self, data):
         self.data = data
