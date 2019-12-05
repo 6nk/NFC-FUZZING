@@ -20,9 +20,9 @@ def save_file(fname, data):
         file.write(str(data).replace("bytearray(b'", "").replace("')", "").replace('\\', "").encode())
         file.close()
 
-def mutate_bits(data):
+def mutate_bits(data, rate):
     print("mutate_bits")
-    count = int((len(data) * 8)*0.1) # how much % we want to mutate (10% here)
+    count = int((len(data) * 8)*rate/100) # how much % we want to mutate (10% here)
     # print(("data length", len(data)))
     # print(("Number of mutation", count))
     if count == 0 :
@@ -41,9 +41,9 @@ def mutate_bits(data):
         # print(("data", data))
     return data
 
-def mutate_bytes(data):
+def mutate_bytes(data, rate):
     print("mutate_bytes")
-    count = int(len(data)*0.1) # how much % we want to mutate
+    count = int(len(data)**rate/100) # how much % we want to mutate
     # print(("data length", len(data)))
     # print(("Number of mutation", count))
     if count == 0 :
@@ -59,7 +59,7 @@ def mutate_bytes(data):
         # print(("data", data))
     return data
 
-def mutate_magic(data):
+def mutate_magic(data, rate):
     print("mutate_magic")
     numbers = [
         (1, struct.pack("B", 0xff)),
@@ -72,7 +72,7 @@ def mutate_magic(data):
         (4, struct.pack("I", 0x80000000)),
         (4, struct.pack("I", 0x7fffffff)),
         ]
-    count = int(len(data) * 0.1)
+    count = int(len(data) *rate/100)
     # print(("data length", len(data)))
     # print(("Number of mutation", count))
     if count == 0 :
@@ -95,10 +95,10 @@ def mutate_magic(data):
     return data
 
 
-def mutate(data):
+def mutate(data, rate):
     print(type(data))
     return random.choice([
         mutate_bits,
         mutate_bytes,
         mutate_magic
-       ])(data[::])
+       ])(data[::], rate)

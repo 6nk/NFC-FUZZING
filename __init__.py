@@ -35,25 +35,25 @@ def emulationMode(payload, ndef, fuzz, log, fuzzfields):
 
 def fuzz(ndef,payload):
 
-    mutated_sample = mutate(bytearray(payload.encode()))
-    #
+    mutated_sample = mutate(bytearray(payload.encode()), 30)
+
     print("mutated_sample", mutated_sample)
     print("mutated_sample type", type(mutated_sample))
     emul = Emulate("tty:USB0")
     emul.emulate(mutated_sample)
 
 def normalMode(payload):
-    ad = adb(host="127.0.0.1", port=5037)
-    device = ad.ListDevices()
-    input_samples = mutate(bytearray(payload.encode()))
-
-    ad.logCat(device, payload)
+    input_samples = mutate(bytearray(payload.encode()), 30)
     send("tty:USB0", payload)
-    ad.logCat(device, payload)
-    mutated_sample = mutate(random.choice(input_samples))
-    ad.logCat(device, mutated_sample.decode('ISO-8859-1'))
-    send("tty:USB0", mutated_sample.decode('ISO-8859-1'))
-    ad.logCat(device, mutated_sample.decode('ISO-8859-1'))
+
+def fromFile():
+    emul = Emulate("tty:USB0")
+    input_samples = [ load_file("data/") ]
+    emul.emulate(input_samples[0])
+
+    mutated_sample = mutate(input_samples[0], 30)
+
+    emul.emulate(mutated_sample)
 
 def __init__():
     ndef = NdefGeneration()
@@ -74,9 +74,14 @@ def __init__():
     parser.add_argument("-field", type=str, help="Fuzz field field in ndef format : -field paylod")
 
     parser.add_argument("-adb", help="Log from android smartphone", action='store_true')
+    parser.add_argument("-file", help="", action="store_true")
+    parser.add_argument("-bluetooth", type=str, help='Activate bluetooth using NFC')
+
+
     results = parser.parse_args()
 
-
+    if results.bluetooth:
+        emulationMode(results.bluetooth, ndef, 0,0,0)
 
     if not results.p :
         print("Need payload : python __init__.py -p Payload")
@@ -98,6 +103,9 @@ def __init__():
     if results.adb :
         emulationMode(results.p, ndef, 0, 1, 0)
 
+    if results.file :
+        fromFile()
+
     if results.field :
         if re.search("TNF", results.field):
             ndef.setRandTNF()
@@ -115,9 +123,9 @@ def __init__():
             print("Invalid field ! You can only fuzz one of them : [TNF, MB, ME, CR, SR, IL]")
             exit(0)
         if results.adb :
-            emulationMode(results.p, ndef, 0, 0, 1)
-        else:
             emulationMode(results.p, ndef, 0, 1, 1)
+        else:
+            emulationMode(results.p, ndef, 0, 0, 1)
 
 
 __init__()

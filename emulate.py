@@ -13,39 +13,23 @@ class Emulate():
         self.usb = usb
 
     def on_startup(self, target):
-        print("1")
         target = self.prepare_tag(target)
         print("** waiting for a reader **")
         return target
 
     def prepare_tag(self, target):
-        print("2")
         return self.prepare_tag(target)
 
     def on_connect(self, tag):
-        print("4")
         log.info("tag activated")
         return self.emulate_on_start(tag)
 
     def emulate_on_start(self, tag):
-        print("5")
         return self.emulate_tag(tag)
 
     def prepare_tag(self, target):
-        print("3")
-        # if self.payload:
-        #     # TODO: GENERER LES PREMIERS BYTES AU LIEU DE LES ECRIRE EN DUR DANS LE FICHIER
-        #     ndef_data_size = len(self.payload)
-        #     print("OPTION.DATA prepared ", self.payload)
-        #     ndef_area_size = ((ndef_data_size + 15) // 16) * 16
-        #     ndef_area_size = max(ndef_area_size, 1024)
-        #     ndef_data_area = (self.payload) \
-        #         + bytearray(ndef_area_size - ndef_data_size)
-        # else:
-        #     ndef_data_area = bytearray(1024)
 
         if self.payload:
-            # TODO: GENERER LES PREMIERS BYTES AU LIEU DE LES ECRIRE EN DUR DANS LE FICHIER
             ndef_data_size = len(self.payload)
             print("OPTION.DATA prepared ", self.payload)
             ndef_area_size = ((ndef_data_size + 15) // 16) * 16
@@ -63,18 +47,14 @@ class Emulate():
         attribute_data[2] = 1
         nmaxb = len(ndef_data_area) // 16
         attribute_data[3:5] = struct.pack(">H", nmaxb)
-        print("nmaxb", nmaxb)
         attribute_data[5:9] = 4 * [0]
         attribute_data[9] = 0
-        print("self.options.data", self.payload)
         attribute_data[10:14] = struct.pack(">I", len(self.payload))
 
         attribute_data[10] = 1
         print(attribute_data[15])
         attribute_data[14:16] = struct.pack(">H", sum(attribute_data[:14]))
         self.payload = attribute_data + ndef_data_area
-        print("ndef_data_area", ndef_data_area)
-        print("ndef_data_area len",len(ndef_data_area))
         print(self.payload)
         target.brty =  "212F"
         idm, pmm, _sys = '03FEFFE011223344', '01E0000000FFFF00', '12FC'
@@ -83,9 +63,7 @@ class Emulate():
         return target
 
     def emulate_tag(self, tag):
-        print("6")
         def ndef_read(block_number, rb, re):
-            print("7")
             log.debug("tt3 read block #{0}".format(block_number))
             if block_number < len(self.payload) / 16:
                 first, last = block_number * 16, (block_number + 1) * 16
@@ -93,12 +71,10 @@ class Emulate():
                 return block_data
 
         def ndef_write(block_number, block_data, wb, we=1):
-            print("8")
             log.debug("tt3 write block #{0}".format(block_number))
             if block_number < len(self.payload) / 16:
                 first, last = block_number * 16, (block_number + 1) * 16
                 self.payload[first:last] = block_data
-                print("block_data", block_data)
                 return True
 
         tag.add_service(0x0009, ndef_read, ndef_write)
