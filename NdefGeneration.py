@@ -3,7 +3,17 @@ import re
 from mFuzz import *
 
 class NdefGeneration():
+    """
+        Class used to generate NDEF format from a payload
+        ...
+         Methods
+         -------
+         Bluetooth(payload)
+            Verify if the bluetooth mac address is valid
+            and return bluetooth meta-data
 
+        Well_Known(payload)
+    """
     def __init__(self):
         self.len_tnf = 0
         self.payload = ''
@@ -13,13 +23,12 @@ class NdefGeneration():
             'MB' : 1, 'ME' : 1, 'CR' : 0, 'SR' : 1, 'IL' : 0, 'TNF' : '{0:03b}'.format(0)
         }
 
-
-
     def Bluetooth(self, payload):
         if re.search(r'^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$', payload):
             self.setPayload_length(len(payload.replace(':', '')))
             self.setTNF(2)
             return bytes([32,12]) + 'application/vnd.bluetooth.ep.oob'.encode('UTF-8')
+
     def getTNF(self):
         return self.header['TNF']
 
@@ -45,7 +54,6 @@ class NdefGeneration():
         self.payload = payload
         self.setPayload_length(payload)
         uri = self.Well_known_URI(payload)
-        print("self.getPayload_length()", self.getPayload_length())
 
         print(self.getTNF())
         if self.getTNF() == "000" :
@@ -82,9 +90,6 @@ class NdefGeneration():
         return None
 
     def Well_Known_Text(self, payload, language):
-        # TODO : add encoding and language bytes
-        # encoding = 0 if UTF-8 and 1 if UTF-16
-        # en => 65 6E
         self.setPayload_length(len(payload))
         return bytes([84, len(language)]) + language.encode()
 
@@ -96,9 +101,11 @@ class NdefGeneration():
 
 
     def Absolute_URI(self, payload):
-        tmp = re.search(r'((http|https)\:\/\/)?[a-zA-Z0-9\.\/\?\:@\-_=#]+\.([a-zA-Z]){2,6}([a-zA-Z0-9\.\&\/\?\:@\-_=#])*', payload)
+        tmp = re.search(r'^www?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$', payload)
         if tmp:
-            return bytes([3, len(payload)])
+            self.setTNF(3)
+            self.payload = payload
+            return bytes([len(self.payload), 0])
         return None
 
     def Unknow(self, payload):
@@ -125,13 +132,12 @@ class NdefGeneration():
 
     def Empty(self, payload):
         if not payload or payload is " ":
-            self.setTNF(0)
+            if self.getTNF() == "000" :
+                self.setTNF(1)
             return bytes([1,len(payload)])
         return None
 
     def bitstring_to_bytes(self, s, fuzz):
-        # print("len",len(s))
-        # randbool = bool(random.getrandbits(1))
         if fuzz :
             randbool = bool(random.getrandbits(1))
             return int(s, 2).to_bytes(32 // 8, byteorder='big', signed=randbool)
@@ -146,56 +152,38 @@ class NdefGeneration():
             header = ''.join(str(value) for key,value in self.header.items())
             if not payload or payload is " ":
                 if fuzz :
-                    mutated_sample = mutate(bytearray(payload.encode()))
+                    mutated_sample = mutate(bytearray(payload.encode()), 10)
                     self.payload = mutated_sample
-                    self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + empty + bytearray(self.payload.encode("UTF-8"))
+                    self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + empty + bytearray(self.payload)
                 elif fields :
                     self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + empty + bytearray(self.payload.encode("UTF-8"))
                 else:
                     self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + empty + bytearray(self.payload.encode("UTF-8"))
 
             else:
-                bluetooth = self.Bluetooth(payload)
-                if bluetooth:
+                absolute_uri = self.Absolute_URI(payload)
+                if absolute_uri :
                     header = ''.join(str(value) for key,value in self.header.items())
-                    bytes_payload = bytearray(payload.replace(':', '').encode('UTF-8'))
-                    self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + bluetooth + bytes([12]) + bytes_payload + bytes([3, 3]) + bytes([6, 11])
-                else:
-                    well_known = self.Well_Known(payload)
-                    if well_known :
-                        if fuzz :
-                            header = ''.join(str(value) for key,value in self.header.items())
-                            mutated_sample = mutate(bytearray(payload.encode()))
-                            self.payload = mutated_sample
-                            self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload)
-                        elif fields :
-                            self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload.encode("UTF-8"))
-                        else:
-                            header = ''.join(str(value) for key,value in self.header.items())
-                            self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload.encode("UTF-8"))
-            # elif mime :
-            #     self.setTNF(2)
-            #     header = ''.join(str(value) for key,value in self.header.items())
-            #     self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + mime + bytearray(self.payload.encode("UTF-8"))
-            #
-            # elif uri :
-            #     self.setTNF(3)
-            #     header = ''.join(str(value) for key,value in self.header.items())
-            #     if fuzz :
-            #         mutated_sample = mutate(bytearray(payload.encode()))
-            #         self.payload = mutated_sample
-            #         self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + uri + bytearray(self.payload)
-            #     else :
-            #         self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + uri + bytearray(self.payload.encode("UTF-8"))
-            # elif external:
-            #     self.setTNF(4)
-            #     header = ''.join(str(value) for key,value in self.header.items())
-            #     self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + external + bytearray(self.payload.encode("UTF-8"))
-            #
-            # elif unchanged :
-            #     self.setTNF(6)
-            #     header = ''.join(str(value) for key,value in self.header.items())
-            #     self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + unchanged + bytearray(self.payload.encode("UTF-8"))
+                    self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + absolute_uri + bytearray(self.payload.encode("UTF-8"))
+                else :
+                    bluetooth = self.Bluetooth(payload)
+                    if bluetooth:
+                        header = ''.join(str(value) for key,value in self.header.items())
+                        bytes_payload = bytearray(payload.replace(':', '').encode('UTF-8'))
+                        self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + bluetooth + bytes([12]) + bytes_payload + bytes([3, 3]) + bytes([6, 11])
+                    else:
+                        well_known = self.Well_Known(payload)
+                        if well_known :
+                            if fuzz :
+                                header = ''.join(str(value) for key,value in self.header.items())
+                                mutated_sample = mutate(bytearray(payload.encode()),10)
+                                self.payload = mutated_sample
+                                self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload)
+                            elif fields :
+                                self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload.encode("UTF-8"))
+                            else:
+                                header = ''.join(str(value) for key,value in self.header.items())
+                                self.ndef_payload = bytearray(self.bitstring_to_bytes(header, fields)) + well_known + bytearray(self.payload.encode("UTF-8"))
             print(self.header)
             return self.ndef_payload
         return None

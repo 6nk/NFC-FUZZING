@@ -28,7 +28,7 @@ def mutate_bits(data, rate):
     if count == 0 :
         count = 1
     for i in range(count):
-        print(("--------------- ITERATION ------------", i))
+        # print(("--------------- ITERATION ------------", i))
         bit = random.randint(0, len(data)*8-1)
         # print(("bit", bit))
         idx_bit = bit%8
@@ -42,8 +42,8 @@ def mutate_bits(data, rate):
     return data
 
 def mutate_bytes(data, rate):
-    print("mutate_bytes")
-    count = int(len(data)**rate/100) # how much % we want to mutate
+    # print("mutate_bytes")
+    count = int(len(data)*rate/100) # how much % we want to mutate
     # print(("data length", len(data)))
     # print(("Number of mutation", count))
     if count == 0 :

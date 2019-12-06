@@ -35,25 +35,41 @@ def emulationMode(payload, ndef, fuzz, log, fuzzfields):
 
 def fuzz(ndef,payload):
 
-    mutated_sample = mutate(bytearray(payload.encode()), 30)
+    mutated_sample = mutate(bytearray(payload.encode()), 10)
 
     print("mutated_sample", mutated_sample)
     print("mutated_sample type", type(mutated_sample))
     emul = Emulate("tty:USB0")
-    emul.emulate(mutated_sample)
+    emul.emulate(mutated_sample, 10)
 
 def normalMode(payload):
-    input_samples = mutate(bytearray(payload.encode()), 30)
+    input_samples = mutate(bytearray(payload.encode()), 10)
     send("tty:USB0", payload)
 
-def fromFile():
-    emul = Emulate("tty:USB0")
-    input_samples = [ load_file("data/") ]
-    emul.emulate(input_samples[0])
+def fromFile(log):
+    if log :
+        ad = adb(host="127.0.0.1", port=5037)
+        device = ad.ListDevices()
+        if device :
+            input_samples = [ load_file("data/") ]
+            print("Initial data :", input_samples[0].decode("iso-8859-1"))
+            mutated_sample = mutate(input_samples[0], 10)
+            ad.logCat(device, mutated_sample)
+            emul = Emulate("tty:USB0")
 
-    mutated_sample = mutate(input_samples[0], 30)
-
-    emul.emulate(mutated_sample)
+            ad.logCat(device, mutated_sample)
+            emul.emulate(mutated_sample)
+            ad.logCat(device, mutated_sample)
+            ad.logCat(device, mutated_sample)
+            ad.close_logcat()
+        else:
+            print("No such devices")
+    else :
+        input_samples = [ load_file("data/") ]
+        print("Initial data :", input_samples[0].decode("iso-8859-1"))
+        mutated_sample = mutate(input_samples[0], 10)
+        emul = Emulate("tty:USB0")
+        emul.emulate(mutated_sample)
 
 def __init__():
     ndef = NdefGeneration()
@@ -83,6 +99,11 @@ def __init__():
     if results.bluetooth:
         emulationMode(results.bluetooth, ndef, 0,0,0)
 
+    if results.file and results.adb:
+        fromFile(1)
+    if results.file :
+        fromFile(0)
+
     if not results.p :
         print("Need payload : python __init__.py -p Payload")
         exit(0)
@@ -90,9 +111,9 @@ def __init__():
     if results.emulate :
         emulationMode(results.p, ndef, 0, 0, 0)
 
-
     if results.normal:
         normalMode(results.p)
+
 
     if results.fuzz and results.adb :
         emulationMode(results.p, ndef, 1, 1, 0)
@@ -102,9 +123,6 @@ def __init__():
 
     if results.adb :
         emulationMode(results.p, ndef, 0, 1, 0)
-
-    if results.file :
-        fromFile()
 
     if results.field :
         if re.search("TNF", results.field):

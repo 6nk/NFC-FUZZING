@@ -1,0 +1,400 @@
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.534 15175 15175 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.543  3636  3735 E Sensors : RED : 0, GREEN : 0, BLUE : 0, CLEAR : 0, CALCULATED LUX : 0.000000, CCT : 1687.000000, REAL LUX : 0.000000 a_time = 245, gain = 64, ir=0, rp1=1, gp1=0, bp1=0, cp1=0, cpl=1957120 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.903 15208 15208 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.907 15208 15208 E Zygote  : accessInfo : 0 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.921 14819 14819 E cr_BkgrdTaskJS: Tried finishing non-current BackgroundTask. 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.951 15225 15225 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.986  4870  4870 E TaskServiceHelper: Cannot execute TaskName.UNKNOWN (or data got corrupted). 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.109  4870  9338 E LauncherUtil: Failed to get system resource ID. 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.408 15269 15269 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.440 15281 15281 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.694 15208 15208 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.946 15331 15331 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.002 15348 15348 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.068 15208 15208 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.259 15269 15269 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.615 15269 15269 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.765 15427 15427 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.849 15331 15331 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:18.299 15331 15331 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:18.369 15427 15427 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:18.470 15427 15427 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:20.556  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 07:00:00.244  3636  3735 E Sensors : RED : 0, GREEN : 0, BLUE : 0, CLEAR : 0, CALCULATED LUX : 0.000000, CCT : 1687.000000, REAL LUX : 0.000000 a_time = 245, gain = 64, ir=0, rp1=1, gp1=0, bp1=0, cp1=0, cpl=1957120 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 07:31:01.241  4280 15874 E WakeLock: GCM_HB_ALARM release without a matched acquire! 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.101  4280  7271 E Auth    : [GoogleAccountDataServiceImpl] getToken() -> NETWORK_ERROR. Account: <ELLIDED:85879595>, App: com.google.android.talk, Service: oauth2:https://www.googleapis.com/auth/chat openid https://www.googleapis.com/auth/peopleapi.readwrite https://www.googleapis.com/auth/hangouts https://www.googleapis.com/auth/chat.native https://www.googleapis.com/auth/photos.firstparty.upload 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : Babel: ewa: Cannot get auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ewb.a(SourceFile:52) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fyt.a(SourceFile:48) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fyt.a(SourceFile:30) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at frr.b(SourceFile:21) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at gcl.a(SourceFile:60) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ghb.a(SourceFile:4) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at bsv.run(SourceFile:5) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : Caused by: java.io.IOException: NetworkError 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqi.a(SourceFile:61) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqj.d(SourceFile:31) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hdk.a(SourceFile:11) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hdk.a(SourceFile:14) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ewb.a(SourceFile:1) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fyt.b(SourceFile:122) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at frr.a(SourceFile:44) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fti.a(SourceFile:24) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at bsn.call(Unknown Source) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at bsl.run(SourceFile:29) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at java.lang.Thread.run(Thread.java:762) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqt.a(SourceFile:36) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqi.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ivs.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	... 16 more 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:31:01.327  4280 16032 E WakeLock: GCM_HB_ALARM release without a matched acquire! 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:37:38.177  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:37:39.341  4653 16105 E WorkSourceUtil: Could not find package: com.google.android.gms.checkin 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:37:42.762  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:38:51.201  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.846  4280  4309 E Auth    : [GoogleAccountDataServiceImpl] getToken() -> NETWORK_ERROR. Account: <ELLIDED:85879595>, App: com.google.android.talk, Service: oauth2:https://www.googleapis.com/auth/chat openid https://www.googleapis.com/auth/peopleapi.readwrite https://www.googleapis.com/auth/hangouts https://www.googleapis.com/auth/chat.native https://www.googleapis.com/auth/photos.firstparty.upload 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : Babel: ewa: Cannot get auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ewb.a(SourceFile:52) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fyt.a(SourceFile:48) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fyt.a(SourceFile:30) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at frr.b(SourceFile:21) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at gcl.a(SourceFile:60) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ghb.a(SourceFile:4) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at bsv.run(SourceFile:5) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : Caused by: java.io.IOException: NetworkError 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqi.a(SourceFile:61) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqj.d(SourceFile:31) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hdk.a(SourceFile:11) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hdk.a(SourceFile:14) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ewb.a(SourceFile:1) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fyt.b(SourceFile:122) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at frr.a(SourceFile:44) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fti.a(SourceFile:24) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at bsn.call(Unknown Source) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at bsl.run(SourceFile:29) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at java.lang.Thread.run(Thread.java:762) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqt.a(SourceFile:36) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqi.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ivs.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	... 16 more 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:44:30.049 26590 26677 E PlayCommon: [371] ajya.c(10): Failed to connect to server for server timestamp: java.net.UnknownHostException: Unable to resolve host "play.googleapis.com": No address associated with hostname 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:44:30.678 26590 26640 E PlayCommon: [340] ajya.c(10): Failed to connect to server for server timestamp: java.net.UnknownHostException: Unable to resolve host "play.googleapis.com": No address associated with hostname 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:44:30.815 26590 26640 E PlayCommon: [340] ajya.a(7): Failed to get auth token: java.io.IOException: NetworkError 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:45:30.374 26762 26809 E PlayCommon: [343] efd.b: Failed to connect to server: java.net.UnknownHostException: Unable to resolve host "play.googleapis.com": No address associated with hostname 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:35.314  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.478 12543 16966 E hka     : Babel: Network error while getting auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at hdk.a(SourceFile:14) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at ewb.a(SourceFile:1) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at fyt.b(SourceFile:122) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at frr.a(SourceFile:44) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at fti.a(SourceFile:24) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at bsn.call(Unknown Source) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at bsl.run(SourceFile:29) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at java.lang.Thread.run(Thread.java:762) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.534 15175 15175 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.543  3636  3735 E Sensors : RED : 0, GREEN : 0, BLUE : 0, CLEAR : 0, CALCULATED LUX : 0.000000, CCT : 1687.000000, REAL LUX : 0.000000 a_time = 245, gain = 64, ir=0, rp1=1, gp1=0, bp1=0, cp1=0, cpl=1957120 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.903 15208 15208 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.907 15208 15208 E Zygote  : accessInfo : 0 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.921 14819 14819 E cr_BkgrdTaskJS: Tried finishing non-current BackgroundTask. 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.951 15225 15225 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:15.986  4870  4870 E TaskServiceHelper: Cannot execute TaskName.UNKNOWN (or data got corrupted). 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.109  4870  9338 E LauncherUtil: Failed to get system resource ID. 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.408 15269 15269 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.440 15281 15281 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.694 15208 15208 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.946 15331 15331 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.002 15348 15348 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.068 15208 15208 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.259 15269 15269 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.615 15269 15269 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.765 15427 15427 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.849 15331 15331 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:18.299 15331 15331 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:18.369 15427 15427 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:18.470 15427 15427 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:20.556  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 07:00:00.244  3636  3735 E Sensors : RED : 0, GREEN : 0, BLUE : 0, CLEAR : 0, CALCULATED LUX : 0.000000, CCT : 1687.000000, REAL LUX : 0.000000 a_time = 245, gain = 64, ir=0, rp1=1, gp1=0, bp1=0, cp1=0, cpl=1957120 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 07:31:01.241  4280 15874 E WakeLock: GCM_HB_ALARM release without a matched acquire! 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.101  4280  7271 E Auth    : [GoogleAccountDataServiceImpl] getToken() -> NETWORK_ERROR. Account: <ELLIDED:85879595>, App: com.google.android.talk, Service: oauth2:https://www.googleapis.com/auth/chat openid https://www.googleapis.com/auth/peopleapi.readwrite https://www.googleapis.com/auth/hangouts https://www.googleapis.com/auth/chat.native https://www.googleapis.com/auth/photos.firstparty.upload 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : Babel: ewa: Cannot get auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ewb.a(SourceFile:52) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fyt.a(SourceFile:48) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fyt.a(SourceFile:30) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at frr.b(SourceFile:21) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at gcl.a(SourceFile:60) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ghb.a(SourceFile:4) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at bsv.run(SourceFile:5) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : Caused by: java.io.IOException: NetworkError 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqi.a(SourceFile:61) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqj.d(SourceFile:31) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hdk.a(SourceFile:11) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hdk.a(SourceFile:14) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ewb.a(SourceFile:1) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fyt.b(SourceFile:122) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at frr.a(SourceFile:44) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fti.a(SourceFile:24) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at bsn.call(Unknown Source) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at bsl.run(SourceFile:29) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at java.lang.Thread.run(Thread.java:762) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqt.a(SourceFile:36) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqi.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ivs.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	... 16 more 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:31:01.327  4280 16032 E WakeLock: GCM_HB_ALARM release without a matched acquire! 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:37:38.177  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:37:39.341  4653 16105 E WorkSourceUtil: Could not find package: com.google.android.gms.checkin 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:37:42.762  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:38:51.201  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.846  4280  4309 E Auth    : [GoogleAccountDataServiceImpl] getToken() -> NETWORK_ERROR. Account: <ELLIDED:85879595>, App: com.google.android.talk, Service: oauth2:https://www.googleapis.com/auth/chat openid https://www.googleapis.com/auth/peopleapi.readwrite https://www.googleapis.com/auth/hangouts https://www.googleapis.com/auth/chat.native https://www.googleapis.com/auth/photos.firstparty.upload 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : Babel: ewa: Cannot get auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ewb.a(SourceFile:52) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fyt.a(SourceFile:48) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fyt.a(SourceFile:30) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at frr.b(SourceFile:21) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at gcl.a(SourceFile:60) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ghb.a(SourceFile:4) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at bsv.run(SourceFile:5) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : Caused by: java.io.IOException: NetworkError 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqi.a(SourceFile:61) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqj.d(SourceFile:31) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hdk.a(SourceFile:11) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hdk.a(SourceFile:14) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ewb.a(SourceFile:1) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fyt.b(SourceFile:122) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at frr.a(SourceFile:44) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fti.a(SourceFile:24) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at bsn.call(Unknown Source) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at bsl.run(SourceFile:29) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at java.lang.Thread.run(Thread.java:762) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqt.a(SourceFile:36) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqi.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ivs.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	... 16 more 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:44:30.049 26590 26677 E PlayCommon: [371] ajya.c(10): Failed to connect to server for server timestamp: java.net.UnknownHostException: Unable to resolve host "play.googleapis.com": No address associated with hostname 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:44:30.678 26590 26640 E PlayCommon: [340] ajya.c(10): Failed to connect to server for server timestamp: java.net.UnknownHostException: Unable to resolve host "play.googleapis.com": No address associated with hostname 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:44:30.815 26590 26640 E PlayCommon: [340] ajya.a(7): Failed to get auth token: java.io.IOException: NetworkError 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:45:30.374 26762 26809 E PlayCommon: [343] efd.b: Failed to connect to server: java.net.UnknownHostException: Unable to resolve host "play.googleapis.com": No address associated with hostname 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:35.314  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.478 12543 16966 E hka     : Babel: Network error while getting auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at hdk.a(SourceFile:14) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at ewb.a(SourceFile:1) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at fyt.b(SourceFile:122) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at frr.a(SourceFile:44) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at fti.a(SourceFile:24) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at bsn.call(Unknown Source) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at bsl.run(SourceFile:29) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at java.lang.Thread.run(Thread.java:762) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.408 15269 15269 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.440 15281 15281 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.694 15208 15208 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.946 15331 15331 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.002 15348 15348 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.068 15208 15208 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.259 15269 15269 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.615 15269 15269 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.765 15427 15427 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.849 15331 15331 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:18.299 15331 15331 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:18.369 15427 15427 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:18.470 15427 15427 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:20.556  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 07:00:00.244  3636  3735 E Sensors : RED : 0, GREEN : 0, BLUE : 0, CLEAR : 0, CALCULATED LUX : 0.000000, CCT : 1687.000000, REAL LUX : 0.000000 a_time = 245, gain = 64, ir=0, rp1=1, gp1=0, bp1=0, cp1=0, cpl=1957120 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 07:31:01.241  4280 15874 E WakeLock: GCM_HB_ALARM release without a matched acquire! 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.101  4280  7271 E Auth    : [GoogleAccountDataServiceImpl] getToken() -> NETWORK_ERROR. Account: <ELLIDED:85879595>, App: com.google.android.talk, Service: oauth2:https://www.googleapis.com/auth/chat openid https://www.googleapis.com/auth/peopleapi.readwrite https://www.googleapis.com/auth/hangouts https://www.googleapis.com/auth/chat.native https://www.googleapis.com/auth/photos.firstparty.upload 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : Babel: ewa: Cannot get auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ewb.a(SourceFile:52) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fyt.a(SourceFile:48) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fyt.a(SourceFile:30) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at frr.b(SourceFile:21) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at gcl.a(SourceFile:60) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ghb.a(SourceFile:4) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at bsv.run(SourceFile:5) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : Caused by: java.io.IOException: NetworkError 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqi.a(SourceFile:61) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqj.d(SourceFile:31) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hdk.a(SourceFile:11) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hdk.a(SourceFile:14) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ewb.a(SourceFile:1) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fyt.b(SourceFile:122) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at frr.a(SourceFile:44) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fti.a(SourceFile:24) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at bsn.call(Unknown Source) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at bsl.run(SourceFile:29) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at java.lang.Thread.run(Thread.java:762) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqt.a(SourceFile:36) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqi.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ivs.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	... 16 more 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:31:01.327  4280 16032 E WakeLock: GCM_HB_ALARM release without a matched acquire! 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:37:38.177  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:37:39.341  4653 16105 E WorkSourceUtil: Could not find package: com.google.android.gms.checkin 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:37:42.762  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:38:51.201  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.846  4280  4309 E Auth    : [GoogleAccountDataServiceImpl] getToken() -> NETWORK_ERROR. Account: <ELLIDED:85879595>, App: com.google.android.talk, Service: oauth2:https://www.googleapis.com/auth/chat openid https://www.googleapis.com/auth/peopleapi.readwrite https://www.googleapis.com/auth/hangouts https://www.googleapis.com/auth/chat.native https://www.googleapis.com/auth/photos.firstparty.upload 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : Babel: ewa: Cannot get auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ewb.a(SourceFile:52) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fyt.a(SourceFile:48) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fyt.a(SourceFile:30) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at frr.b(SourceFile:21) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at gcl.a(SourceFile:60) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ghb.a(SourceFile:4) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at bsv.run(SourceFile:5) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : Caused by: java.io.IOException: NetworkError 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqi.a(SourceFile:61) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqj.d(SourceFile:31) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hdk.a(SourceFile:11) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hdk.a(SourceFile:14) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ewb.a(SourceFile:1) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fyt.b(SourceFile:122) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at frr.a(SourceFile:44) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fti.a(SourceFile:24) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at bsn.call(Unknown Source) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at bsl.run(SourceFile:29) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at java.lang.Thread.run(Thread.java:762) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqt.a(SourceFile:36) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqi.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ivs.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	... 16 more 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:44:30.049 26590 26677 E PlayCommon: [371] ajya.c(10): Failed to connect to server for server timestamp: java.net.UnknownHostException: Unable to resolve host "play.googleapis.com": No address associated with hostname 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:44:30.678 26590 26640 E PlayCommon: [340] ajya.c(10): Failed to connect to server for server timestamp: java.net.UnknownHostException: Unable to resolve host "play.googleapis.com": No address associated with hostname 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:44:30.815 26590 26640 E PlayCommon: [340] ajya.a(7): Failed to get auth token: java.io.IOException: NetworkError 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:45:30.374 26762 26809 E PlayCommon: [343] efd.b: Failed to connect to server: java.net.UnknownHostException: Unable to resolve host "play.googleapis.com": No address associated with hostname 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:35.314  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.478 12543 16966 E hka     : Babel: Network error while getting auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at hdk.a(SourceFile:14) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at ewb.a(SourceFile:1) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at fyt.b(SourceFile:122) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at frr.a(SourceFile:44) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at fti.a(SourceFile:24) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at bsn.call(Unknown Source) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at bsl.run(SourceFile:29) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at java.lang.Thread.run(Thread.java:762) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at hqt.a(SourceFile:36) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at hqi.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at ivs.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	... 16 more 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : ewa: Cannot get auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at ewb.a(SourceFile:52) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at fyt.a(SourceFile:48) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at fyt.a(SourceFile:30) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.408 15269 15269 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.440 15281 15281 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.694 15208 15208 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:16.946 15331 15331 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.002 15348 15348 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.068 15208 15208 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.259 15269 15269 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.615 15269 15269 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.765 15427 15427 E Zygote  : v2 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:17.849 15331 15331 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:18.299 15331 15331 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:18.369 15427 15427 E 0:4089750836: :platStubs.cpp,Line#89:GetVersionExW NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:18.470 15427 15427 E 0:4089750836: :platStubs.cpp,Line#543:FreeLibrary NOTIMPL 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 06:42:20.556  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 07:00:00.244  3636  3735 E Sensors : RED : 0, GREEN : 0, BLUE : 0, CLEAR : 0, CALCULATED LUX : 0.000000, CCT : 1687.000000, REAL LUX : 0.000000 a_time = 245, gain = 64, ir=0, rp1=1, gp1=0, bp1=0, cp1=0, cpl=1957120 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 07:31:01.241  4280 15874 E WakeLock: GCM_HB_ALARM release without a matched acquire! 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.101  4280  7271 E Auth    : [GoogleAccountDataServiceImpl] getToken() -> NETWORK_ERROR. Account: <ELLIDED:85879595>, App: com.google.android.talk, Service: oauth2:https://www.googleapis.com/auth/chat openid https://www.googleapis.com/auth/peopleapi.readwrite https://www.googleapis.com/auth/hangouts https://www.googleapis.com/auth/chat.native https://www.googleapis.com/auth/photos.firstparty.upload 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : Babel: ewa: Cannot get auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ewb.a(SourceFile:52) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fyt.a(SourceFile:48) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fyt.a(SourceFile:30) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at frr.b(SourceFile:21) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at gcl.a(SourceFile:60) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ghb.a(SourceFile:4) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at bsv.run(SourceFile:5) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : Caused by: java.io.IOException: NetworkError 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqi.a(SourceFile:61) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqj.d(SourceFile:31) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hdk.a(SourceFile:11) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hdk.a(SourceFile:14) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ewb.a(SourceFile:1) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fyt.b(SourceFile:122) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at frr.a(SourceFile:44) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at fti.a(SourceFile:24) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at bsn.call(Unknown Source) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at bsl.run(SourceFile:29) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at java.lang.Thread.run(Thread.java:762) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqt.a(SourceFile:36) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at hqi.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	at ivs.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:06:27.111 12543 12597 E hka     : 	... 16 more 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:31:01.327  4280 16032 E WakeLock: GCM_HB_ALARM release without a matched acquire! 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:37:38.177  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:37:39.341  4653 16105 E WorkSourceUtil: Could not find package: com.google.android.gms.checkin 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:37:42.762  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:38:51.201  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.846  4280  4309 E Auth    : [GoogleAccountDataServiceImpl] getToken() -> NETWORK_ERROR. Account: <ELLIDED:85879595>, App: com.google.android.talk, Service: oauth2:https://www.googleapis.com/auth/chat openid https://www.googleapis.com/auth/peopleapi.readwrite https://www.googleapis.com/auth/hangouts https://www.googleapis.com/auth/chat.native https://www.googleapis.com/auth/photos.firstparty.upload 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : Babel: ewa: Cannot get auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ewb.a(SourceFile:52) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fyt.a(SourceFile:48) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fyt.a(SourceFile:30) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at frr.b(SourceFile:21) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at gcl.a(SourceFile:60) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ghb.a(SourceFile:4) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1133) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at bsv.run(SourceFile:5) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : Caused by: java.io.IOException: NetworkError 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqi.a(SourceFile:61) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqj.d(SourceFile:31) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hdk.a(SourceFile:11) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hdk.a(SourceFile:14) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ewb.a(SourceFile:1) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fyt.b(SourceFile:122) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at frr.a(SourceFile:44) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at fti.a(SourceFile:24) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at bsn.call(Unknown Source) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at bsl.run(SourceFile:29) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at java.lang.Thread.run(Thread.java:762) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqt.a(SourceFile:36) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at hqi.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	at ivs.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:42:01.852 12543 12593 E hka     : 	... 16 more 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:44:30.049 26590 26677 E PlayCommon: [371] ajya.c(10): Failed to connect to server for server timestamp: java.net.UnknownHostException: Unable to resolve host "play.googleapis.com": No address associated with hostname 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:44:30.678 26590 26640 E PlayCommon: [340] ajya.c(10): Failed to connect to server for server timestamp: java.net.UnknownHostException: Unable to resolve host "play.googleapis.com": No address associated with hostname 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:44:30.815 26590 26640 E PlayCommon: [340] ajya.a(7): Failed to get auth token: java.io.IOException: NetworkError 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:45:30.374 26762 26809 E PlayCommon: [343] efd.b: Failed to connect to server: java.net.UnknownHostException: Unable to resolve host "play.googleapis.com": No address associated with hostname 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:35.314  3636  3735 E Sensors : Sensor : Meta event 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.478 12543 16966 E hka     : Babel: Network error while getting auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at hdk.a(SourceFile:14) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at ewb.a(SourceFile:1) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at fyt.b(SourceFile:122) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at frr.a(SourceFile:44) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at fti.a(SourceFile:24) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at bsn.call(Unknown Source) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at bsl.run(SourceFile:29) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:607) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at java.lang.Thread.run(Thread.java:762) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at hqt.a(SourceFile:36) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at hqi.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at ivs.b(SourceFile:15) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	... 16 more 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : ewa: Cannot get auth token 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at ewb.a(SourceFile:52) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at fyt.a(SourceFile:48) 
+Data bytearray(b'\xd1\x01\x0f\x00\x00enHello World!'): 12-06 08:46:36.481 12543 16966 E hka     : 	at fyt.a(SourceFile:30) 

@@ -35,7 +35,7 @@ class adb:
         self.connect = connect.socket.makefile()
         for index in range(0, 100):
             print("Data {}: {}".format(self.getData(), self.connect.readline().strip()))
-            self.save_to_file("emlog", "Data {}: {} \r\n".format(self.getData(), self.connect.readline().strip()))
+            self.save_to_file("emlog.log", "Data {}: {} \r\n".format(self.getData(), self.connect.readline().strip()))
 
 
     def close_logcat(self):
