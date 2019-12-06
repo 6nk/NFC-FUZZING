@@ -57,6 +57,7 @@ On peut utiliser [libnfc](https://github.com/nfc-tools/libnfc) comme outil perme
 >$ wget https://github.com/nfc-tools/libnfc/releases/download/libnfc-1.7.0/libnfc-1.7.0.tar.bz2
 * Ensuite, on dézippe l'archive :
 >$ tar -xvjf libnfc-1.7.0.tar.bz2
+
 >$ cd cd libnfc-1.7.0
 
 ### Configuration
@@ -88,6 +89,7 @@ device.connstring = "pn532_uart:/dev/ttyUSB0"
 ### Compiler nfclib
 Pour compiler libnfc, il vous suffit d'entrer les commandes suivantes :
 >$ sudo make clean
+
 >$ sudo make install all
 
 ### Tester
@@ -159,6 +161,9 @@ Après avoir installé toutes les dépendances, il suffit de cloner ce projet gi
 
 # Configuration du téléphone
 ```  À compléter ```
+
+# Configuration de la ST25R3911B-DISCO
+À partir de [STSW-ST25R001](https://www.st.com/content/st_com/en/products/embedded-software/st25-nfc-rfid-software/stsw-st25r001.html), installer le logiciel de contrôle de la carte, en suivant les instructions. Un tutorial de la prise en main du logiciel est disponible sur [youtube](https://www.youtube.com/watch?v=PjM-Fs2lo3c). 
 
 # Architecture du code
 ```  À compléter ```
