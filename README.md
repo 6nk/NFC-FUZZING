@@ -160,6 +160,9 @@ Après avoir installé toutes les dépendances, il suffit de cloner ce projet gi
 # Configuration du téléphone
 ```  À compléter ```
 
+# Configuration de la ST25R3911B-DISCO
+À partir de [STSW-ST25R001](https://www.st.com/content/st_com/en/products/embedded-software/st25-nfc-rfid-software/stsw-st25r001.html), installer le logiciel de contrôle de la carte, en suivant les instructions. Un tutorial de la prise en main du logiciel est disponible sur [youtube](https://www.youtube.com/watch?v=PjM-Fs2lo3c). 
+
 # Architecture du code
 ```  À compléter ```
 
