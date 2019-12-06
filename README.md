@@ -57,6 +57,7 @@ On peut utiliser [libnfc](https://github.com/nfc-tools/libnfc) comme outil perme
 >$ wget https://github.com/nfc-tools/libnfc/releases/download/libnfc-1.7.0/libnfc-1.7.0.tar.bz2
 * Ensuite, on dézippe l'archive :
 >$ tar -xvjf libnfc-1.7.0.tar.bz2
+
 >$ cd cd libnfc-1.7.0
 
 ### Configuration
