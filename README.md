@@ -89,6 +89,7 @@ device.connstring = "pn532_uart:/dev/ttyUSB0"
 ### Compiler nfclib
 Pour compiler libnfc, il vous suffit d'entrer les commandes suivantes :
 >$ sudo make clean
+
 >$ sudo make install all
 
 ### Tester
