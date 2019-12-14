@@ -6,7 +6,7 @@ NFC-FUZZING est un framework de fuzzing construit pour fuzz applications NFC, ba
  # Exigences
  ## Configuration matérielle requise
 
-  * [PN532 Breakout Board](http://www.adafruit.com/product/364) ou [PN532 Controller Shield for Arduino(https://www.adafruit.com/product/789)
+  * [PN532 Breakout Board](http://www.adafruit.com/product/364) ou [PN532 Controller Shield for Arduino](https://www.adafruit.com/product/789)
   * [FTDI Cable](http://www.adafruit.com/products/70)
 
 ## Dépendances
