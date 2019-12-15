@@ -169,7 +169,18 @@ Après avoir installé toutes les dépendances, il suffit de cloner ce projet gi
 ```  À compléter ```
 
 # Usage
-```  À compléter ```
+Pour utiliser le fuzzer, il suffit de connecter les différents éléments à l’ordinateur, à savoir le module NFC, lesmartphone ou le ST25R3911B. Ensuite, dans un terminal taper :
+
+### Mode émulation 
+python __init__.py -p PAYLOAD -emulate. Permet d’émuler et tester le bon fonctionde la génération du message NDEF et l’envoie du message
+### Mode normale
+python __init__.py -p PAYLOAD -normal. A pour but de vérifier l’envoie du message.
+### Mode fuzzing
+python __init__.py -p PAYLOAD -fuzz [-adb]. Cela permet de lancer 10 fuzzing à la suite.On peut mettre l’option -adb pour récupérer le log du smartphone android.
+### Mode fuzzing du champ
+python __init__.py -p PAYLOAD -field CHAMP [-adb]. Cela permet de lancer10 fuzzing à la suite. On peut mettre l’option -adb pour récupérer le log du smartphone android.
+### Mode boucle
+python __init__.py -loop NOMBRE [-adb]. Fuzzer N fois le message NDEF à partir d’unjeu de données valide. On peut mettre l’option -adb pour récupérer le log du smartphone android.
 
 
 # Mail
