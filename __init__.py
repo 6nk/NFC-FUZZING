@@ -14,29 +14,30 @@ def send(usb, data):
 
 
 def emulationMode(payload, ndef, fuzz, log, fuzzfields):
+
     if log :
         ad = adb(host="127.0.0.1", port=5037)
         device = ad.ListDevices()
         if device :
-            ad.logCat(device, payload)
-            data = ndef.getNdef_payload(payload, fuzz, fuzzfields)
-            emul = Emulate("tty:USB0")
-            ad.logCat(device, payload)
-            emul.emulate(data)
-            ad.logCat(device, payload)
+            for i in range(10):
+                ad.logCat(device, payload)
+                data = ndef.getNdef_payload(payload, fuzz, fuzzfields)
+                emul = Emulate("tty:USB0")
+                ad.logCat(device, data)
+                emul.emulate(data)
+                ad.logCat(device, data)
 
             ad.close_logcat()
         else:
             print("No such devices")
     else:
-        data = ndef.getNdef_payload(payload, fuzz, fuzzfields)
-        emul = Emulate("tty:USB0")
-        emul.emulate(data)
+        for i in range(10):
+            data = ndef.getNdef_payload(payload, fuzz, fuzzfields)
+            emul = Emulate("tty:USB0")
+            emul.emulate(data)
 
 def fuzz(ndef,payload):
-
     mutated_sample = mutate(bytearray(payload.encode()), 10)
-
     print("mutated_sample", mutated_sample)
     print("mutated_sample type", type(mutated_sample))
     emul = Emulate("tty:USB0")
@@ -46,30 +47,33 @@ def normalMode(payload):
     input_samples = mutate(bytearray(payload.encode()), 10)
     send("tty:USB0", payload)
 
-def fromFile(log):
-    if log :
-        ad = adb(host="127.0.0.1", port=5037)
-        device = ad.ListDevices()
-        if device :
+def fromFile(log, loop):
+
+    for i in range(loop):
+        if log :
+            ad = adb(host="127.0.0.1", port=5037)
+            device = ad.ListDevices()
+            if device :
+                input_samples = [ load_file("data/") ]
+                print("Initial data :", input_samples[0].decode("iso-8859-1"))
+                mutated_sample = mutate(input_samples[0], 10)
+                ad.logCat(device, mutated_sample)
+                emul = Emulate("tty:USB0")
+
+                ad.logCat(device, mutated_sample)
+                emul.emulate(mutated_sample)
+                ad.logCat(device, mutated_sample)
+                ad.logCat(device, mutated_sample)
+                ad.close_logcat()
+            else:
+                print("No such devices")
+        else :
             input_samples = [ load_file("data/") ]
             print("Initial data :", input_samples[0].decode("iso-8859-1"))
             mutated_sample = mutate(input_samples[0], 10)
-            ad.logCat(device, mutated_sample)
             emul = Emulate("tty:USB0")
-
-            ad.logCat(device, mutated_sample)
             emul.emulate(mutated_sample)
-            ad.logCat(device, mutated_sample)
-            ad.logCat(device, mutated_sample)
-            ad.close_logcat()
-        else:
-            print("No such devices")
-    else :
-        input_samples = [ load_file("data/") ]
-        print("Initial data :", input_samples[0].decode("iso-8859-1"))
-        mutated_sample = mutate(input_samples[0], 10)
-        emul = Emulate("tty:USB0")
-        emul.emulate(mutated_sample)
+    loopNumbers()
 
 def __init__():
     ndef = NdefGeneration()
@@ -90,7 +94,7 @@ def __init__():
     parser.add_argument("-field", type=str, help="Fuzz field field in ndef format : -field paylod")
 
     parser.add_argument("-adb", help="Log from android smartphone", action='store_true')
-    parser.add_argument("-file", help="", action="store_true")
+    parser.add_argument("-loop", type=int, help="Fuzz several time : -loop number of loops")
     parser.add_argument("-bluetooth", type=str, help='Activate bluetooth using NFC')
 
 
@@ -99,10 +103,10 @@ def __init__():
     if results.bluetooth:
         emulationMode(results.bluetooth, ndef, 0,0,0)
 
-    if results.file and results.adb:
-        fromFile(1)
-    if results.file :
-        fromFile(0)
+    if results.loop and results.adb:
+        fromFile(1, results.loop)
+    if results.loop :
+        fromFile(0, results.loop)
 
     if not results.p :
         print("Need payload : python __init__.py -p Payload")
@@ -117,12 +121,6 @@ def __init__():
 
     if results.fuzz and results.adb :
         emulationMode(results.p, ndef, 1, 1, 0)
-
-    if results.fuzz :
-        emulationMode(results.p, ndef, 1, 0, 0)
-
-    if results.adb :
-        emulationMode(results.p, ndef, 0, 1, 0)
 
     if results.field :
         if re.search("TNF", results.field):
@@ -144,6 +142,11 @@ def __init__():
             emulationMode(results.p, ndef, 0, 1, 1)
         else:
             emulationMode(results.p, ndef, 0, 0, 1)
+    elif results.fuzz :
+        emulationMode(results.p, ndef, 1, 0, 0)
 
+    elif results.adb :
+        emulationMode(results.p, ndef, 0, 1, 0)
+        emulationMode(results.p, ndef, 0, 1, 0)
 
 __init__()

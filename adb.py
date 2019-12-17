@@ -47,6 +47,11 @@ class adb:
     def getData(self):
         return self.data
 
+    def reboot(self, deviceName):
+        # adb reboot
+        device = self.connectDevice(deviceName)
+        device.shell("reboot")
+
     def save_to_file(self, fname,data):
         with open(fname, "a+") as file:
             file.write(data)
