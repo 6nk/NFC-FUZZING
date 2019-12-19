@@ -166,27 +166,27 @@ Après avoir installé toutes les dépendances, il suffit de cloner ce projet gi
 À partir de [STSW-ST25R001](https://www.st.com/content/st_com/en/products/embedded-software/st25-nfc-rfid-software/stsw-st25r001.html), installer le logiciel de contrôle de la carte, en suivant les instructions. Un tutorial de la prise en main du logiciel est disponible sur [youtube](https://www.youtube.com/watch?v=PjM-Fs2lo3c). 
 
 # Architecture du code
-$ tree
+$ ./tree-md .
 .
-├── data
-│   ├── Browser
-│   ├── Maps
-│   ├── Maps-AAR
-│   ├── Market
-│   ├── Play
-│   ├── SMS
-│   ├── Smart-Poster1
-│   ├── Text1
-│   └── Dialer
-├── \_\_init\_\_.py
-├── mFuzz.py
-├── NdefGeneration.py
-├── sendAndroid.py
-├── emulate.py
-├── adb.py
-├── Mine.py
-├── docs
-└── README.md
+ * [data](./data)
+   * [Browser](./data/Browser)
+   * [Dialer](./data/Dialer)
+   * [Maps](./data/Maps)
+   * [Maps-AAR](./data/Maps-AAR)
+   * [Maps](./data/Maps)
+   * [Play](./data/Play)
+   * [Smart-Poster1](./data/Smart-Poster1)
+   * [SMS](./data/SMS)
+   * [Text1](./data/Text1)
+ * [docs](./docs)
+ * [adb.py](./adb.py)
+ * [emulate.py](./emulate.py)
+ * [\_\_init\_\_.py](./__init__.py)
+ * [mFuzz.py](./mFuzz.py)
+ * [NdefGeneration.py](./NdefGeneration.py)
+ * [sendAndroid.py](./sendAndroid.py)
+ * [README.md](./README.md)
+
 
 1 dossier, 17 files
 
