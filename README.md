@@ -166,31 +166,54 @@ Après avoir installé toutes les dépendances, il suffit de cloner ce projet gi
 À partir de [STSW-ST25R001](https://www.st.com/content/st_com/en/products/embedded-software/st25-nfc-rfid-software/stsw-st25r001.html), installer le logiciel de contrôle de la carte, en suivant les instructions. Un tutorial de la prise en main du logiciel est disponible sur [youtube](https://www.youtube.com/watch?v=PjM-Fs2lo3c). 
 
 # Architecture du code
-```  À compléter ```
+$ tree
+.
+├── data
+│   ├── Browser
+│   ├── Maps
+│   ├── Maps-AAR
+│   ├── Market
+│   ├── Play
+│   ├── SMS
+│   ├── Smart-Poster1
+│   ├── Text1
+│   └── Dialer
+├── \_\_init\_\_.py
+├── mFuzz.py
+├── NdefGeneration.py
+├── sendAndroid.py
+├── emulate.py
+├── adb.py
+├── Mine.py
+├── docs
+└── README.md
+
+1 dossier, 17 files
 
 # Usage
 Pour utiliser le fuzzer, il suffit de connecter les différents éléments à l’ordinateur, à savoir le module NFC, lesmartphone ou le ST25R3911B. Ensuite, dans un terminal taper :
 
 ### Mode émulation 
->$ python \_\_init\_\_.py -p PAYLOAD -emulate
+>$ python \_\_init\_\_.py -p PAYLOAD -emulate. 
 
-Permet d’émuler et tester le bon fonctionde la génération du message NDEF et l’envoie du message
+Permet d'émuler et tester le bon fonctionnement de la génération du message NDEF et l'envoie du message
+
 ### Mode normale
->$ python \_\_init\_\_.py -p PAYLOAD -normal
+>$ python \_\_init\_\_.py -p PAYLOAD -normal. 
 
-A pour but de vérifier l’envoie du message.
+A pour but de vérifier l'envoie du message. 
 ### Mode fuzzing
->$ python \_\_init\_\_.py -p PAYLOAD -fuzz [-adb]
+>$ python \_\_init\_\_.py -p PAYLOAD -fuzz [-adb]. 
 
-Cela permet de lancer 10 fuzzing à la suite.On peut mettre l’option -adb pour récupérer le log du smartphone android.
+Permet de lancer 10 fuzzing à la suite. On peut mettre l'option -adb pour récupérer l'historique d'événements du smartphone android. 
 ### Mode fuzzing du champ
->$ python \_\_init\_\_.py -p PAYLOAD -field CHAMP [-adb]
+>$  python \_\_init\_\_.py -p PAYLOAD -field CHAMP [-adb]. 
 
-Cela permet de lancer10 fuzzing à la suite. On peut mettre l’option -adb pour récupérer le log du smartphone android.
+Permet de lancer 10 fuzzing d'un des en-têtes à la suite. On peut mettre l'option -adb pour récupérer l'historique d'événements du smartphone android.
 ### Mode boucle
->$ python \_\_init\_\_.py -loop NOMBRE [-adb]
+>$ python \_\_init\_\_.py -loop NOMBRE [-adb]. 
 
-Fuzzer N fois le message NDEF à partir d’unjeu de données valide. On peut mettre l’option -adb pour récupérer le log du smartphone android.
+Fuzzer N fois le message NDEF à partir d'un jeu de données valide. On peut mettre l'option -adb pour récupérer l'historique d'événements du smartphone android. 
 
 
 # Mail
