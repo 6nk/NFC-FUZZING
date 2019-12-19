@@ -10,6 +10,7 @@ class SendToAndroid():
         self.data = data
         print("dataseted ", data)
         self.usb = usb
+        
     def send_ndef_message(self,llc):
         if self.URLparser() :
             sp = ndef.UriRecord(self.data)

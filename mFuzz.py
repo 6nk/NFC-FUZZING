@@ -11,21 +11,27 @@ count_byte = 0
 count_magic = 0
 
 def load_file(path):
+    """
+        Load dataset from a file
+    """
     fname = path+random.choice(os.listdir(path))
-
     with open(fname, "rb") as file :
         read = file.read()
         file.close()
-        # print(bytearray(read))
         return bytearray(read)
 
-
 def save_file(fname, data):
+    """
+        Save bytearray to a file
+    """
     with open(fname, "wb") as file:
         file.write(str(data).replace("bytearray(b'", "").replace("')", "").replace('\\', "").encode())
         file.close()
 
 def mutate_bits(data, rate):
+    """
+        Mutate randomly X% bits of a data bytearray
+    """
     global count_bit
     count_bit +=1
     print("mutate_bits")
@@ -40,6 +46,9 @@ def mutate_bits(data, rate):
     return data
 
 def mutate_bytes(data, rate):
+    """
+        Mutate randomly X% bytes of a data bytearray
+    """
     global count_byte
     count_byte += 1
     print("mutate_bytes")
@@ -53,6 +62,9 @@ def mutate_bytes(data, rate):
     return data
 
 def mutate_magic(data, rate):
+    """
+        Replace randomly X% of a data bytearray by specific bytes
+    """
     global count_magic
     count_magic += 1
     print("mutate_magic")
@@ -68,33 +80,29 @@ def mutate_magic(data, rate):
         (4, struct.pack("I", 0x7fffffff)),
         ]
     count = int(len(data) *rate/100)
-    # print(("data length", len(data)))
-    # print(("Number of mutation", count))
     if count == 0 :
         count = 1
     for i in range(count):
-        # print(("--------------- ITERATION ------------", i))
         n_size, n = random.choice(numbers)
-        print(("nzise, n", n_size, n))
         size = len(data) - n_size
-        # print(("size", size))
         if size > 0 :
             idx = random.randint(0, size)
-            # print(("index", idx))
-            # print(("bytearray", bytearray(n)))
-            # print(("data init", data))
-            # print(("data idx", data[idx:idx + n_size]))
             data[idx:idx + n_size] = bytearray(n)
-            # print(("data", data))
+
     return data
 
 def loopNumbers():
+    """
+        Print the number of occurrences of each mutation algorithm.
+    """
     print("Bit mutation ", count_bit)
     print("Byte mutation ", count_byte)
     print("Magic mutation ", count_magic)
 
 def mutate(data, rate):
-    print(type(data))
+    """
+        Choose randomly the mutation algorithm to use
+    """
     return random.choice([
         mutate_bits,
         mutate_bytes,

@@ -8,6 +8,11 @@ import subprocess
 log = logging.getLogger('main')
 
 class Emulate():
+    """
+        Documentation used :
+            - https://nfcpy.readthedocs.io/en/latest/topics/get-started.html#emulate-a-card
+            - https://nfcpy.readthedocs.io/en/latest/examples/tagtool.html
+    """
     def __init__(self, usb):
         self.payload = ''
         self.usb = usb
@@ -59,7 +64,6 @@ class Emulate():
         target.brty =  "212F"
         idm, pmm, _sys = '03FEFFE011223344', '01E0000000FFFF00', '12FC'
         target.sensf_res = bytearray.fromhex('01' + idm + pmm + _sys)
-
         return target
 
     def emulate_tag(self, tag):
