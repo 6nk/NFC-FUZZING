@@ -160,13 +160,18 @@ Après avoir installé toutes les dépendances, il suffit de cloner ce projet gi
 >$ git clone https://github.com/mahff/NFC-FUZZING
 
 # Configuration du téléphone
-```  À compléter ```
+Il y a quelques réglages sur android qui font du fuzzing une expérience beaucoup plus agréable.
+
+* Activez le débogage USB via les " Options du développeur ". Si vous ne voyez pas cette option, allez dans " À propos du téléphone " et appuyez plusieurs fois sur le " Numéro de compilation ".
+
+* Activez "Rester éveillé" dans les "Options du développeur".
+
+* Réglez "Verrouillage de l'écran" sur Aucun sous "Sécurité".
 
 # Configuration de la ST25R3911B-DISCO
 À partir de [STSW-ST25R001](https://www.st.com/content/st_com/en/products/embedded-software/st25-nfc-rfid-software/stsw-st25r001.html), installer le logiciel de contrôle de la carte, en suivant les instructions. Un tutorial de la prise en main du logiciel est disponible sur [youtube](https://www.youtube.com/watch?v=PjM-Fs2lo3c). 
 
 # Architecture du code
-$ ./tree-md .
 .
  * [data](./data)
    * [Browser](./data/Browser)
@@ -186,8 +191,6 @@ $ ./tree-md .
  * [NdefGeneration.py](./NdefGeneration.py)
  * [sendAndroid.py](./sendAndroid.py)
  * [README.md](./README.md)
-
-
 1 dossier, 17 files
 
 # Usage
