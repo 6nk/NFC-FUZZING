@@ -183,7 +183,6 @@ Il y a quelques réglages sur android qui font du fuzzing une expérience beauco
    * [Smart-Poster1](./data/Smart-Poster1)
    * [SMS](./data/SMS)
    * [Text1](./data/Text1)
- * [docs](./docs)
  * [adb.py](./adb.py)
  * [emulate.py](./emulate.py)
  * [\_\_init\_\_.py](./__init__.py)
